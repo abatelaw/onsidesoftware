@@ -100,6 +100,7 @@ p { margin: 0 0 14px; max-width: 38rem; }
 .tab[aria-selected="true"] { background: var(--card); color: #000000; opacity: 1; }
 .tab:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
 .panel { background: var(--card); color: #000000; border-top: 5px solid var(--c); border-radius: 0 6px 6px 6px; padding: 26px 24px 24px; max-width: 38rem; display: grid; gap: 8px; }
+.panel[hidden] { display: none; }  /* the grid display above would otherwise show every card */
 .panel .plogo { display: block; height: auto; max-width: 100%; margin-bottom: 8px; }
 .panel .meta { font-family: var(--mono); font-size: 0.8rem; color: #333a45; }
 .panel p { margin: 4px 0 0; }
