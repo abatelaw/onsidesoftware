@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify a copy</title>
+<link rel="canonical" href="https://www.onsidesoftware.com/verify/">
+<meta name="description" content="Check that an OnTrial Notebook copy is genuine and licensed.">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="hero"><div class="inner">
+  <header>
+    <a href="/"><img class="logo" alt="OnSide Software" width="1254" height="464" src="/logo.svg"></a>
+    <nav class="site" aria-label="Site"><a href="/">Home</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/verify/" aria-current="page">Verify a copy</a></nav>
+  </header>
+  <h1>Verify a copy</h1>
+  <p class="lede">Check that an OnTrial Notebook is a genuine, licensed copy. Products are sold only at onsidesoftware.com.</p>
+</div></div>
+<div class="ribbon" aria-hidden="true"></div>
+<main><div class="inner doc">
+<p>Enter the serial number and the Licensee name exactly as they appear in the footer of the notebook's pages (for example <span style="font-family:var(--mono)">No. OT-ABCD2345</span>). The page answers only whether they match a license we issued. Nothing you enter is sent anywhere: the check runs in your browser.</p>
+<form class="verify" id="vf" autocomplete="off">
+  <label>Serial number<input id="serial" name="serial" required placeholder="OT-ABCD2345" spellcheck="false"></label>
+  <label>Licensee name<input id="licensee" name="licensee" required placeholder="As printed in the footer" spellcheck="false"></label>
+  <button type="submit">Verify</button>
+</form>
+<div id="result" class="result" hidden aria-live="polite"></div>
+<h2>If a copy does not verify</h2>
+<p>It may be an unlicensed or counterfeit copy. Please tell us at <a href="mailto:support@onsidesoftware.com">support@onsidesoftware.com</a>. If you bought it from anyone other than OnSide Software, tell us who; Section 17 of the <a href="/terms/">Terms</a> explains the safeguards in every copy.</p>
+</div></main>
+<script>
+(function () {
+  "use strict";
+  var list = null;
+  function norm(s) { return String(s || "").normalize("NFC").trim().replace(/\s+/g, " ").toLowerCase(); }
+  function hex(buf) { return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ("0" + b.toString(16)).slice(-2); }).join(""); }
+  function fp(serial, name) {
+    var s = String(serial || "").trim().toUpperCase().replace(/^NO\.?\s*/, "");
+    return crypto.subtle.digest("SHA-256", new TextEncoder().encode("ontrial-license|" + s + "|" + norm(name))).then(hex);
+  }
+  function show(ok, text) {
+    var r = document.getElementById("result");
+    r.hidden = false; r.className = "result " + (ok ? "ok" : "bad");
+    r.innerHTML = "<strong>" + (ok ? "Genuine." : "Not found.") + "</strong> " + text;
+  }
+  document.getElementById("vf").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var serial = document.getElementById("serial").value, name = document.getElementById("licensee").value;
+    var load = list ? Promise.resolve(list) : fetch("licenses.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { list = new Set(j.fingerprints || []); return list; });
+    Promise.all([load, fp(serial, name)]).then(function (res) {
+      if (res[0].has(res[1])) show(true, "This serial number and name match a license issued by OnSide Software.");
+      else show(false, "This serial number and name do not match a license we issued. Check the spelling against the page footer; if it still does not match, please contact us.");
+    }).catch(function () { show(false, "The check could not run in this browser. Please try again, or contact us."); });
+  });
+})();
+</script>
+<div class="ribbon" aria-hidden="true"></div>
+<footer><div class="inner"><span>&copy; 2026 OnSide Software, Inc. All rights reserved.</span><span><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/verify/">Verify a copy</a></span></div></footer>
+</body>
+</html>
