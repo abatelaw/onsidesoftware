@@ -83,9 +83,11 @@ body { background: var(--bg); color: var(--fg); font-family: var(--body); font-s
 .inner { max-width: 44rem; margin-inline: auto; padding-inline: 20px; }
 .hero { background: var(--band); padding-block: 36px 64px; }
 .ribbon { height: 6px; background: linear-gradient(90deg, var(--teal) 0 25%, var(--rust) 25% 50%, var(--wine) 50% 75%, var(--silver) 75% 100%); }
-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; margin-bottom: 56px; }
-.logo { --w: clamp(220px, 60vw, 340px); display: block; width: var(--w); height: auto; margin-left: calc(var(--w) * -0.013875); }@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo { background: #ffffff; padding: 10px 14px; border-radius: 6px; margin-left: 0; } }:root[data-theme="dark"] .logo { background: #ffffff; padding: 10px 14px; border-radius: 6px; margin-left: 0; }
-.tag { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+header { --w: clamp(220px, 60vw, 340px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; margin-bottom: 56px; }
+.logo { display: block; width: var(--w); height: auto; margin-left: calc(var(--w) * -0.013875); }@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo { background: #ffffff; padding: 10px 14px; border-radius: 6px; margin-left: 0; } }:root[data-theme="dark"] .logo { background: #ffffff; padding: 10px 14px; border-radius: 6px; margin-left: 0; }
+.tag { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; padding-left: calc(var(--w) * 0.013556 - 0.75px); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tag { padding-left: calc(13.25px + var(--w) * 0.027431); } }
+:root[data-theme="dark"] .tag { padding-left: calc(13.25px + var(--w) * 0.027431); }
 h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.1; letter-spacing: -0.01em; text-wrap: balance; margin: 0 0 18px; max-width: 18ch; }
 .lede { font-size: 1.15rem; color: var(--muted); max-width: 36rem; margin: 0; }
 section { padding-block: 52px; }
