@@ -22,6 +22,18 @@
         "dev"
       ],
       "port": 8787
+    },
+    {
+      "name": "onside-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8090",
+        "--directory",
+        "/Users/ninoabate/Developer/onsidesoftware"
+      ],
+      "port": 8090
     }
   ]
 }
