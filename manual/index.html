@@ -43,6 +43,14 @@
 .manual .toc > ol { columns: 2 18rem; }
 .manual .toc > ol > li { break-inside: avoid; margin-bottom: 6px; }
 .printonly { display: none; }
+.manual a.xref { color: inherit; text-decoration: underline; text-decoration-color: var(--wine); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.manual a.xref:hover { color: var(--wine); }
+.manual .az { columns: 3 14rem; column-gap: 28px; }
+.manual .azgroup { break-inside: avoid; margin-bottom: 12px; }
+.manual .azgroup h4 { font-family: var(--display); font-size: 1.1rem; margin: 0 0 4px; color: var(--wine); }
+.manual .azgroup ul { list-style: none; padding: 0; margin: 0; font-size: 0.93rem; }
+.manual .azgroup li { margin: 0 0 3px; }
+.manual .pg { display: none; }
 @media print {
   @page { size: Letter; margin: 0.55in 0.6in 0.75in; }
   body { font-size: 10.5pt; line-height: 1.45; background: #fff; color: #000; }
@@ -61,6 +69,8 @@
   .manual figure img { border-color: #bbb; }
   .manual a { text-decoration: none; }
   .manual .doc p, .manual .doc li, .manual .doc dd { max-width: none; }
+  .manual .pg { display: inline; font-family: var(--mono); font-size: 0.85em; color: #444; margin-left: 4px; }
+  .manual .az { columns: 3; font-size: 9.5pt; }
 }
 </style>
 </head>
@@ -79,7 +89,7 @@
 </div></div>
 <div class="ribbon" aria-hidden="true"></div>
 <main><div class="inner wide doc">
-<nav class="toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#start">Part One: Getting started</a><ol><li><a href="#about">What the notebooks are</a></li><li><a href="#apps">What you need</a></li><li><a href="#ipad">Set up PDF Viewer on the iPad</a></li><li><a href="#copies">Your blank master and your case copies</a></li><li><a href="#typing">Typing, lists, check boxes and dictation</a></li></ol></li><li><a href="#tn">Part Two: The OnTrial Notebook</a><ol><li><a href="#tn-find">Find your way around</a></li><li><a href="#tn-home">Home: title page, case information and jurisdiction</a></li><li><a href="#tn-prep">Prep: checklists, theme and chronology</a></li><li><a href="#tn-proof">Proof: the dashboard and the proof charts</a></li><li><a href="#tn-wits">Witnesses: roster, readiness and outlines</a></li><li><a href="#tn-depos">Depositions: designations and impeachment</a></li><li><a href="#tn-exh">Exhibits: lists, status, foundations and scripts</a></li><li><a href="#tn-exam">Exam: scripts, objections, motions and rulings</a></li><li><a href="#tn-jury">Jury: voir dire, panel, instructions and verdict</a></li><li><a href="#tn-log">Log: day plans and the trial log</a></li><li><a href="#tn-close">Closing: plan, elements, rebuttal and damages</a></li><li><a href="#tn-notes">Notes: sticky notes</a></li><li><a href="#tn-pro">Professional edition extras</a></li></ol></li><li><a href="#hn">Part Three: The OnTrial Hearing Notebook</a><ol><li><a href="#hn-flow">How it fits together</a></li><li><a href="#hn-speak">The Speaking Outline</a></li><li><a href="#hn-prep">The Preparation Outline</a></li><li><a href="#hn-support">Sources and Legal Authorities</a></li><li><a href="#hn-rebuttal">Rebuttal and The Record</a></li><li><a href="#hn-copies">Case Copies</a></li><li><a href="#hn-check">Pre-hearing Checklist and Notes</a></li></ol></li><li><a href="#help">Part Four: Troubleshooting and help</a><ol></ol></li></ol></nav>
+<nav class="toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#start">Part One: Getting started</a> <span class="pg" data-for="start"></span><ol><li><a href="#about">What the notebooks are</a> <span class="pg" data-for="about"></span></li><li><a href="#apps">What you need</a> <span class="pg" data-for="apps"></span></li><li><a href="#ipad">Set up PDF Viewer on the iPad</a> <span class="pg" data-for="ipad"></span></li><li><a href="#copies">Your blank master and your case copies</a> <span class="pg" data-for="copies"></span></li><li><a href="#typing">Typing, lists, check boxes and dictation</a> <span class="pg" data-for="typing"></span></li></ol></li><li><a href="#tn">Part Two: The OnTrial Notebook</a> <span class="pg" data-for="tn"></span><ol><li><a href="#tn-find">Find your way around</a> <span class="pg" data-for="tn-find"></span></li><li><a href="#tn-home">Home: title page, case information and jurisdiction</a> <span class="pg" data-for="tn-home"></span></li><li><a href="#tn-prep">Prep: checklists, theme and chronology</a> <span class="pg" data-for="tn-prep"></span></li><li><a href="#tn-proof">Proof: the dashboard and the proof charts</a> <span class="pg" data-for="tn-proof"></span></li><li><a href="#tn-wits">Witnesses: roster, readiness and outlines</a> <span class="pg" data-for="tn-wits"></span></li><li><a href="#tn-depos">Depositions: designations and impeachment</a> <span class="pg" data-for="tn-depos"></span></li><li><a href="#tn-exh">Exhibits: lists, status, foundations and scripts</a> <span class="pg" data-for="tn-exh"></span></li><li><a href="#tn-exam">Exam: scripts, objections, motions and rulings</a> <span class="pg" data-for="tn-exam"></span></li><li><a href="#tn-jury">Jury: voir dire, panel, instructions and verdict</a> <span class="pg" data-for="tn-jury"></span></li><li><a href="#tn-log">Log: day plans and the trial log</a> <span class="pg" data-for="tn-log"></span></li><li><a href="#tn-close">Closing: plan, elements, rebuttal and damages</a> <span class="pg" data-for="tn-close"></span></li><li><a href="#tn-notes">Notes: sticky notes</a> <span class="pg" data-for="tn-notes"></span></li><li><a href="#tn-pro">Professional edition extras</a> <span class="pg" data-for="tn-pro"></span></li></ol></li><li><a href="#hn">Part Three: The OnTrial Hearing Notebook</a> <span class="pg" data-for="hn"></span><ol><li><a href="#hn-flow">How it fits together</a> <span class="pg" data-for="hn-flow"></span></li><li><a href="#hn-speak">The Speaking Outline</a> <span class="pg" data-for="hn-speak"></span></li><li><a href="#hn-prep">The Preparation Outline</a> <span class="pg" data-for="hn-prep"></span></li><li><a href="#hn-support">Sources and Legal Authorities</a> <span class="pg" data-for="hn-support"></span></li><li><a href="#hn-rebuttal">Rebuttal and The Record</a> <span class="pg" data-for="hn-rebuttal"></span></li><li><a href="#hn-copies">Case Copies</a> <span class="pg" data-for="hn-copies"></span></li><li><a href="#hn-check">Pre-hearing Checklist and Notes</a> <span class="pg" data-for="hn-check"></span></li></ol></li><li><a href="#help">Part Four: Troubleshooting and help</a> <span class="pg" data-for="help"></span><ol></ol></li><li><a href="#index">Index</a> <span class="pg" data-for="index"></span><ol></ol></li></ol></nav>
 
 
 <section id="start" class="part">
@@ -88,15 +98,15 @@
 <h3 id="about">What the notebooks are</h3>
 <p>OnTrial makes two notebooks for civil litigators. Each one is a single fillable PDF that works like a paper trial binder: tabs down the side, a page for everything, and room to write. Because it is a PDF, it runs in apps you already have, and what you type stays on your own device.</p>
 <ul>
-<li><strong>The OnTrial Notebook</strong> organizes a trial from the day it is set to the closing argument: checklists, proof charts, witness outlines, exhibit lists, deposition designations, examination scripts, the objections table, jury pages, a live trial log, and closing pages. It comes in two editions, Standard and Professional.</li>
-<li><strong>The OnTrial Hearing Notebook</strong> is built for a motion or evidentiary hearing: a one-page Speaking Outline you argue from, a Preparation Outline behind each point, the facts and authorities behind each point, a Rebuttal page, the record, and a place for copies of cases and papers.</li>
+<li><strong>The OnTrial Notebook</strong> organizes a trial from the day it is set to the closing argument: checklists, <a class="xref" href="#fig-tn-claim">proof charts</a>, witness outlines, exhibit lists, deposition designations, examination scripts, the objections table, jury pages, a live trial log, and closing pages. It comes in two editions, Standard and Professional.</li>
+<li><strong>The OnTrial Hearing Notebook</strong> is built for a motion or evidentiary hearing: a one-page <a class="xref" href="#hn-speak">Speaking Outline</a> you argue from, a <a class="xref" href="#hn-prep">Preparation Outline</a> behind each point, the facts and authorities behind each point, a <a class="xref" href="#hn-rebuttal">Rebuttal</a> page, the record, and a place for copies of cases and papers.</li>
 </ul>
 <table class="grid">
 <thead><tr><th></th><th>Standard</th><th>Professional</th></tr></thead>
 <tbody>
 <tr><td>Rules</td><td>Federal Rules of Evidence and Civil Procedure, with a blank for your state's rule beside each</td><td>The same, plus state rules filled in for the states you buy</td></tr>
 <tr><td>Witnesses</td><td>10</td><td>20</td></tr>
-<tr><td>Claims (proof charts)</td><td>6</td><td>10, plus a Defenses Dashboard and 10 defense charts</td></tr>
+<tr><td>Claims (proof charts)</td><td>6</td><td>10, plus a <a class="xref" href="#tn-proof">Defenses Dashboard</a> and 10 defense charts</td></tr>
 <tr><td>Exhibits (ours / adverse)</td><td>85 / 51</td><td>170 / 102</td></tr>
 <tr><td>Trial days (day plans / log pages)</td><td>5 / 8</td><td>10 / 16</td></tr>
 <tr><td>Deposition designation pages</td><td>3</td><td>6</td></tr>
@@ -112,7 +122,7 @@
 <ul>
 <li><strong>To build a case copy</strong>, a computer with <strong>Adobe Acrobat Reader</strong> (free, Mac or Windows). On Windows, open the notebook in Acrobat Reader, not in Edge or another browser.</li>
 <li><strong>In court</strong>, an iPad with <strong>PDF Viewer by Nutrient</strong>, or a laptop with Acrobat Reader. On a laptop, use Full Screen Mode (Command-L on a Mac, Ctrl-L on Windows); the arrow keys turn the pages.</li>
-<li><strong>Never save a notebook in Apple Preview.</strong> Preview strips out the buttons and scripts, and they do not come back. If that happens, start a new copy from your blank master and copy your entries across.</li>
+<li><strong>Never save a notebook in Apple Preview.</strong> Preview strips out the buttons and scripts, and they do not come back. If that happens, start a new copy from your <a class="xref" href="#copies">blank master</a> and copy your entries across.</li>
 <li><strong>Work on one device at a time.</strong> If the file is open on your iPad while you save it on your computer, you can end up with two versions. Close it on one device before you open it on the other.</li>
 </ul>
 
@@ -128,8 +138,8 @@
 <tr><td>JavaScript</td><td>On, if your app shows this setting</td></tr>
 </tbody>
 </table>
-<p>With these settings each page shows whole, one at a time, in the right colors. JavaScript runs the bookmarks, the sticky notes, the Admitted Exhibits page and the other buttons that do more than turn to a page; if it is off, those buttons do nothing. After you change the JavaScript setting, close the notebook and open it again.</p>
-<p class="tip"><strong>Tip.</strong> In a large notebook, the first button that runs a script after you open the file can take a few seconds. After that, every tap is quick.</p>
+<p>With these settings each page shows whole, one at a time, in the right colors. JavaScript runs the bookmarks, the <a class="xref" href="#tn-notes">sticky notes</a>, the <a class="xref" href="#fig-tn-admitted"> fig-tn-admittedAdmitted Exhibits</a> page and the other buttons that do more than turn to a page; if it is off, those buttons do nothing. After you change the JavaScript setting, close the notebook and open it again.</p>
+<p class="tip" id="first-tap"><strong>Tip.</strong> In a large notebook, the first button that runs a script after you open the file can take a few seconds. After that, every tap is quick.</p>
 
 <h3 id="copies">Your blank master and your case copies</h3>
 <ol>
@@ -142,7 +152,7 @@
 
 <h3 id="typing">Typing, lists, check boxes and dictation</h3>
 <ul>
-<li><strong>Type once.</strong> Many boxes appear in more than one place under the same name, and they fill each other. Type the case name in the CASE box at the top right of any page and it fills every page and the title page. A witness name typed on the Roster fills that witness's Profile, Direct and Cross pages.</li>
+<li><strong>Type once.</strong> Many boxes appear in more than one place under the same name, and they fill each other. Type the case name in the CASE box at the top right of any page and it fills every page and the title page. A witness name typed on the <a class="xref" href="#fig-tn-roster">Roster</a> fills that witness's Profile, Direct and Cross pages.</li>
 <li><strong>Lists.</strong> Some boxes are drop-down lists (side, strength, ruling, status and the like). Tap the box and pick a choice.</li>
 <li><strong>Check boxes.</strong> Tap anywhere in the cell to tick or untick.</li>
 <li><strong>The yellow tint.</strong> PDF Viewer tints a box yellow while you type in it. That is the app showing you where you are typing; the tint goes away when you leave the box.</li>
@@ -188,7 +198,7 @@
 <figcaption><strong>Figure 5.</strong> Jurisdiction, in a Professional edition with Arizona rules.
 <ol class="keys"><li><span class="k">1</span><span>Your state's codes and rules.</span></li><li><span class="k">2</span><span>Scheduling-order dates. These also appear on Start Here.</span></li></ol>
 </figcaption></figure>
-<p class="tip"><strong>"Check your state" questions</strong> appear on many scripts and foundation pages. They mark points that may differ where you practice. They are prompts to look the point up, not statements that your state differs.</p>
+<p class="tip" id="check-state"><strong>"Check your state" questions</strong> appear on many scripts and foundation pages. They mark points that may differ where you practice. They are prompts to look the point up, not statements that your state differs.</p>
 
 <h3 id="tn-prep">Prep: checklists, theme and chronology</h3>
 <p>The Prep tab gets the trial organized. Five checklists run from the day trial is set to the last days before trial; then come the case summary, the opening statement, and the chronology.</p>
@@ -249,7 +259,7 @@
 <figcaption><strong>Figure 13.</strong> A Direct Exam Outline.
 <ol class="keys"><li><span class="k">1</span><span>Switch between this witness's Profile, Direct and Cross pages, or go to the Roster.</span></li><li><span class="k">2</span><span>Done: tick each topic as you cover it.</span></li><li><span class="k">3</span><span>Objection chips: tick the box at the left of a chip to mark an objection you expect or raised.</span></li><li><span class="k">4</span><span>Tap a chip's name to open that objection's row on the Objections page</span></li><li><span class="k">5</span><span>All objections opens the whole table.</span></li></ol>
 </figcaption></figure>
-<p class="tip"><strong>Objection chips</strong> appear at the foot of the witness outlines, deposition pages, exhibit scripts, motions and rulings pages, and the trial log. The left part of each chip is a check box; the name opens the objection on the Objections page, with its rule and a quick answer. Use BACK to return.</p>
+<p class="tip" id="chips"><strong>Objection chips</strong> appear at the foot of the witness outlines, deposition pages, exhibit scripts, motions and rulings pages, and the trial log. The left part of each chip is a check box; the name opens the objection on the <a class="xref" href="#fig-tn-objections">Objections page</a>, with its rule and a quick answer. Use BACK to return.</p>
 
 <h3 id="tn-depos">Depositions: designations and impeachment</h3>
 <p><strong>Designations</strong> pages, one per deponent, record each page:line range, the subject, who designated it, any objection and the ruling, how you will use it (affirmative, counter, impeach, rebuttal), and a Read box to tick once it is read in. Record the ruling before the day you read.</p>
@@ -365,12 +375,12 @@
 </figcaption></figure>
 
 <h3 id="tn-close">Closing: plan, elements, rebuttal and damages</h3>
-<p>The <strong>Closing Argument Plan</strong> is an eight-step skeleton built from the proof charts and the starred log entries: open with the theme, state what you are asking for, give the road map, walk the elements, credibility, meet their best argument, damages or relief, and return to the theme.</p>
+<p>The <strong>Closing Argument Plan</strong> is an eight-step skeleton built from the <a class="xref" href="#fig-tn-claim">proof charts</a> and the <a class="xref" href="#fig-tn-log">starred log entries</a>: open with the theme, state what you are asking for, give the road map, walk the elements, credibility, meet their best argument, damages or relief, and return to the theme.</p>
 <figure id="fig-tn-closing">
 <a href="img/tn-closing.jpg"><img src="img/tn-closing.jpg" alt="The Closing Argument Plan, filled in" width="1632" height="918" loading="lazy"></a>
 <figcaption><strong>Figure 32.</strong> The Closing Argument Plan.
 </figcaption></figure>
-<p>The <strong>Claim Elements</strong> pages carry each claim's elements over from its proof chart. For each one, write the best proof (testimony, admissions and quotes with cites), the exhibits to show, how you will say it, and tick Done.</p>
+<p>The <strong>Claim Elements</strong> pages carry each claim's elements over from its <a class="xref" href="#fig-tn-claim">proof chart</a>. For each one, write the best proof (testimony, admissions and quotes with cites), the exhibits to show, how you will say it, and tick Done.</p>
 <figure id="fig-tn-closeclaim">
 <a href="img/tn-closeclaim.jpg"><img src="img/tn-closeclaim.jpg" alt="Closing: Claim 1 Elements, with the elements carried over from the proof chart" width="1632" height="918" loading="lazy"></a>
 <figcaption><strong>Figure 33.</strong> Closing: Claim Elements.
@@ -391,9 +401,9 @@
 
 <h3 id="tn-pro">Professional edition extras</h3>
 <ul>
-<li><strong>State rules.</strong> A Professional copy can include the rules of one or more states. The first state fills in the Jurisdiction page and every "Your state" blank. Each additional state gets its own State Rules section at the front, with a rule-by-rule comparison to the federal rules.</li>
+<li><strong>State rules.</strong> A Professional copy can include the rules of one or more states. The first state fills in the <a class="xref" href="#fig-tn-juris">Jurisdiction page</a> and every "Your state" blank. Each additional state gets its own State Rules section at the front, with a rule-by-rule comparison to the federal rules.</li>
 <li><strong>Print buttons.</strong> Every list page has a Print button at the foot of the page that prints the whole list, all its pages, to paper or to a PDF: the chronology, witness lists, each witness's pages, the exhibit lists, designations, motions, rulings, panel tracker, instructions and trial log.</li>
-<li><strong>More room</strong> (see the table in Part One), the Defenses Dashboard and defense charts, and you can add your own pages.</li>
+<li><strong>More room</strong> (see the table in <a class="xref" href="#start">Part One</a>), the <a class="xref" href="#tn-proof">Defenses Dashboard</a> and defense charts, and you can add your own pages.</li>
 <li><strong>The Hearing Notebook</strong> is included.</li>
 </ul>
 <figure id="fig-tn-staterules">
@@ -408,13 +418,13 @@
 <h3 id="hn-flow">How it fits together</h3>
 <p>The Hearing Notebook is built around one idea: you argue from a single page, and everything behind it is one tap away. Prepare on your computer in this order:</p>
 <ol>
-<li><strong>Case Information</strong>: the court, hearing, matter heard, and counsel.</li>
-<li><strong>Preparation Outline</strong>: write the opening and close in full, then one page per main point, with its facts and citations.</li>
-<li><strong>Speaking Outline</strong>: two or three keywords per point, plus the opening and close as you will say them. This is the page you look at while you argue.</li>
-<li><strong>Sources</strong>, <strong>Legal Authorities</strong>, <strong>Rebuttal</strong> and <strong>The Record</strong>: filled in as you build the points.</li>
-<li><strong>Case Copies</strong>: copies of the key cases and papers, inserted at the back, so they open without a connection.</li>
+<li><strong><a class="xref" href="#fig-tn-caseinfo">Case Information</a></strong>: the court, hearing, matter heard, and counsel.</li>
+<li><strong><a class="xref" href="#hn-prep">Preparation Outline</a></strong>: write the opening and close in full, then one page per main point, with its facts and citations.</li>
+<li><strong><a class="xref" href="#hn-speak">Speaking Outline</a></strong>: two or three keywords per point, plus the opening and close as you will say them. This is the page you look at while you argue.</li>
+<li><strong><a class="xref" href="#hn-support">Sources</a></strong>, <strong><a class="xref" href="#hn-support">Legal Authorities</a></strong>, <strong><a class="xref" href="#hn-rebuttal">Rebuttal</a></strong> and <strong><a class="xref" href="#fig-hn-record">The Record</a></strong>: filled in as you build the points.</li>
+<li><strong><a class="xref" href="#hn-copies">Case Copies</a></strong>: copies of the key cases and papers, inserted at the back, so they open without a connection.</li>
 </ol>
-<p>The header band, the tabs, the CASE box, BACK and NEXT, the bookmarks and the sticky notes work exactly as in the OnTrial Notebook (see Part Two).</p>
+<p>The header band, the tabs, the CASE box, BACK and NEXT, the bookmarks and the <a class="xref" href="#tn-notes">sticky notes</a> work exactly as in the OnTrial Notebook (see <a class="xref" href="#tn">Part Two</a>).</p>
 <figure id="fig-hn-cover">
 <a href="img/hn-cover.jpg"><img src="img/hn-cover.jpg" alt="The Hearing Notebook title page, a plum leather binder" width="1632" height="918" loading="lazy"></a>
 <figcaption><strong>Figure 37.</strong> The Hearing Notebook title page.
@@ -431,11 +441,11 @@
 <li>Give each point <strong>two or three keywords</strong>, no more. They are reminders, not sentences.</li>
 <li>The outline opens with four points. Tap <strong>+ Add a point</strong> for up to seven, or <strong>- Remove a point</strong> for as few as three. The keywords grow or shrink to fill the board.</li>
 <li>When you delete text in a box, a chalk eraser appears beside it. While you type, the text turns dark so you can read it over PDF Viewer's yellow typing tint; it turns back to chalk white when you leave the box.</li>
-<li>Tap a point's number, or its tab, to see that point in full; tap <strong>Opening in full</strong> or <strong>Close in full</strong> for those. Every Preparation Outline page has a <strong>Back to Speaking Outline</strong> button.</li>
+<li>Tap a point's number, or its tab, to see that point in full; tap <strong>Opening in full</strong> or <strong>Close in full</strong> for those. Every <a class="xref" href="#hn-prep">Preparation Outline</a> page has a <strong>Back to Speaking Outline</strong> button.</li>
 </ul>
 
 <h3 id="hn-prep">The Preparation Outline</h3>
-<p><strong>Opening and Close</strong> holds both in full: the opening as you will say it, the exact relief you ask for, the road map of your points, the close as you will say it, and the close in full with the points to land and the exact ask. The short versions are the same boxes as on the Speaking Outline.</p>
+<p><strong>Opening and Close</strong> holds both in full: the opening as you will say it, the exact relief you ask for, the road map of your points, the close as you will say it, and the close in full with the points to land and the exact ask. The short versions are the same boxes as on the <a class="xref" href="#hn-speak">Speaking Outline</a>.</p>
 <figure id="fig-hn-prep0">
 <a href="img/hn-prep0.jpg"><img src="img/hn-prep0.jpg" alt="The Preparation Outline page for the opening and close" width="1632" height="918" loading="lazy"></a>
 <figcaption><strong>Figure 39.</strong> Preparation Outline: Opening and Close.
@@ -454,7 +464,7 @@
 </ol>
 
 <h3 id="hn-support">Sources and Legal Authorities</h3>
-<p>Every fact you add to a point gets a row on that point's <strong>Sources</strong> page, and every citation a row on its <strong>Legal Authorities</strong> page, with the same text and link. Add the document and pin cite (for a fact) or what it supports (for an authority), and the page a copy starts on in the Case Copies section. In each row, <strong>Go</strong> jumps to the copy, <strong>Open</strong> follows the link, and <strong>Back</strong> returns to the point.</p>
+<p>Every fact you add to a point gets a row on that point's <strong>Sources</strong> page, and every citation a row on its <strong>Legal Authorities</strong> page, with the same text and link. Add the document and pin cite (for a fact) or what it supports (for an authority), and the page a copy starts on in the <a class="xref" href="#hn-copies">Case Copies</a> section. In each row, <strong>Go</strong> jumps to the copy, <strong>Open</strong> follows the link, and <strong>Back</strong> returns to the point.</p>
 <figure id="fig-hn-sources">
 <a href="img/hn-sources.jpg"><img src="img/hn-sources.jpg" alt="The Sources page for Point 1" width="1632" height="918" loading="lazy"></a>
 <figcaption><strong>Figure 41.</strong> Sources: the facts behind a point.
@@ -485,12 +495,12 @@
 </figcaption></figure>
 <ol>
 <li>Insert each copy after the Case Copies page. In Acrobat on a Mac: Organize Pages, then Insert, then From File (a paid Acrobat feature). Other apps that insert pages also work.</li>
-<li>In the index, write each copy and the page it starts on. Write the same page in the Copy at p. box of its row on Sources, Legal Authorities or The Record.</li>
+<li>In the index, write each copy and the page it starts on. Write the same page in the Copy at p. box of its row on <a class="xref" href="#hn-support">Sources</a>, <a class="xref" href="#hn-support">Legal Authorities</a> or <a class="xref" href="#fig-hn-record">The Record</a>.</li>
 <li>Before the hearing, tap every <strong>Go</strong> and check it lands on its copy.</li>
 </ol>
 
 <h3 id="hn-check">Pre-hearing Checklist and Notes</h3>
-<p>The <strong>Pre-hearing Checklist</strong> covers what to confirm before you leave for court: the time and courtroom or remote link, the time allowed, the judge's procedures, every paper and link, every citation checked, the outlines final, the proposed order, witnesses and exhibits for an evidentiary hearing, the court reporter and interpreter, the iPad, and the client. The <strong>Notes</strong> page has six sticky notes, as in the OnTrial Notebook.</p>
+<p>The <strong>Pre-hearing Checklist</strong> covers what to confirm before you leave for court: the time and courtroom or remote link, the time allowed, the judge's procedures, every paper and link, every citation checked, the outlines final, the proposed order, witnesses and exhibits for an evidentiary hearing, the court reporter and interpreter, the iPad, and the client. The <strong>Notes</strong> page has six <a class="xref" href="#tn-notes">sticky notes</a>, as in the OnTrial Notebook.</p>
 <figure id="fig-hn-checklist">
 <a href="img/hn-checklist.jpg"><img src="img/hn-checklist.jpg" alt="The Pre-hearing Checklist with items ticked" width="1632" height="918" loading="lazy"></a>
 <figcaption><strong>Figure 46.</strong> The Pre-hearing Checklist.
@@ -500,12 +510,12 @@
 <section id="help" class="part">
 <h2 class="parthead">Part Four: Troubleshooting and help</h2>
 <dl class="faq">
-<dt>Buttons, bookmarks or sticky notes do nothing on the iPad.</dt>
-<dd>Open PDF Viewer's settings and make sure JavaScript is on, then close the notebook and open it again. Check that the file was never saved in Preview; if it was, start a new copy from your blank master. Plain page links (the tabs, BACK and NEXT, the index buttons) work even without JavaScript.</dd>
+<dt>Buttons, bookmarks or <a class="xref" href="#tn-notes">sticky notes</a> do nothing on the iPad.</dt>
+<dd>Open PDF Viewer's settings and make sure <a class="xref" href="#ipad">JavaScript</a> is on, then close the notebook and open it again. Check that the file was never saved in Preview; if it was, start a new copy from your <a class="xref" href="#copies">blank master</a>. Plain page links (the tabs, BACK and NEXT, the index buttons) work even without JavaScript.</dd>
 <dt>The first tap takes a few seconds.</dt>
 <dd>In a large notebook, the first button that runs a script after the file opens takes a moment. After that, taps are quick.</dd>
 <dt>The top of the page is cut off, or pages scroll together.</dt>
-<dd>Use the PDF Viewer settings in Part One: Page Transition Jump, Page Mode Single, Scroll Direction Horizontal, Page Fitting Adaptive.</dd>
+<dd>Use the PDF Viewer settings in <a class="xref" href="#start">Part One</a>: Page Transition Jump, Page Mode Single, Scroll Direction Horizontal, Page Fitting Adaptive.</dd>
 <dt>The colors look brown or all one color.</dt>
 <dd>PDF Viewer is in Sepia or Night mode. Set Appearance to Default (the white button).</dd>
 <dt>A box turns yellow while I type.</dt>
@@ -519,12 +529,139 @@
 <dt>I have two versions of a case copy.</dt>
 <dd>The file was saved on two devices while it was open on both. Keep the newer one. Next time, close the file on one device before you open it on the other.</dd>
 <dt>How do I print?</dt>
-<dd>Use your PDF app's Print command and choose the pages. In the Professional edition, the Print button on a list page prints the whole list.</dd>
+<dd>Use your PDF app's Print command and choose the pages. In the Professional edition, the <a class="xref" href="#tn-pro">Print button</a> on a list page prints the whole list.</dd>
 <dt>Does the notebook send my information anywhere?</dt>
 <dd>No. What you type stays in the file on your device. The notebook does not send it to OnSide Software or anyone else. The Hearing Notebook's Open buttons go only to the addresses you paste in.</dd>
 </dl>
 <p><strong>Getting help.</strong> The help assistant on <a href="https://www.onsidesoftware.com">onsidesoftware.com</a> answers questions about both notebooks. For anything else, write to <a href="mailto:support@onsidesoftware.com">support@onsidesoftware.com</a>.</p>
 <p class="small">The notebooks are organizing and reference tools. They are not legal advice and do not create an attorney-client relationship. Check every rule, citation and deadline against current official sources and your court's local rules. Use is governed by the OnSide Software Terms of Service, at the back of each notebook.</p>
+</section>
+
+<section id="index" class="part">
+<h2 class="parthead">Index</h2>
+<div class="az">
+<div class="azgroup"><h4>A</h4><ul>
+<li><a href="#fig-tn-admitted">Admitted Exhibits page</a> <span class="pg" data-for="fig-tn-admitted"></span></li>
+<li><a href="#tn-exh">Adverse exhibits</a> <span class="pg" data-for="tn-exh"></span></li>
+<li><a href="#ipad">Appearance setting (PDF Viewer)</a> <span class="pg" data-for="ipad"></span></li>
+</ul></div>
+<div class="azgroup"><h4>B</h4><ul>
+<li><a href="#fig-tn-header">BACK and NEXT</a> <span class="pg" data-for="fig-tn-header"></span></li>
+<li><a href="#tn-close">Bench trial findings and conclusions</a> <span class="pg" data-for="tn-close"></span></li>
+<li><a href="#copies">Blank master</a> <span class="pg" data-for="copies"></span></li>
+<li><a href="#tn-find">Bookmarks</a> <span class="pg" data-for="tn-find"></span></li>
+</ul></div>
+<div class="azgroup"><h4>C</h4><ul>
+<li><a href="#typing">CASE box</a> <span class="pg" data-for="typing"></span></li>
+<li><a href="#hn-copies">Case Copies (Hearing Notebook)</a> <span class="pg" data-for="hn-copies"></span></li>
+<li><a href="#copies">Case copies (your copy for each case)</a> <span class="pg" data-for="copies"></span></li>
+<li><a href="#fig-tn-caseinfo">Case Information</a> <span class="pg" data-for="fig-tn-caseinfo"></span></li>
+<li><a href="#fig-tn-summary">Case Summary and Theme</a> <span class="pg" data-for="fig-tn-summary"></span></li>
+<li><a href="#typing">Check boxes</a> <span class="pg" data-for="typing"></span></li>
+<li><a href="#check-state">"Check your state" questions</a> <span class="pg" data-for="check-state"></span></li>
+<li><a href="#hn-check">Checklist, Pre-hearing</a> <span class="pg" data-for="hn-check"></span></li>
+<li><a href="#fig-tn-checklist">Checklists (trial)</a> <span class="pg" data-for="fig-tn-checklist"></span></li>
+<li><a href="#fig-tn-chron">Chronology</a> <span class="pg" data-for="fig-tn-chron"></span></li>
+<li><a href="#fig-tn-closing">Closing Argument Plan</a> <span class="pg" data-for="fig-tn-closing"></span></li>
+<li><a href="#fig-tn-closeclaim">Closing: Claim Elements</a> <span class="pg" data-for="fig-tn-closeclaim"></span></li>
+</ul></div>
+<div class="azgroup"><h4>D</h4><ul>
+<li><a href="#fig-tn-damages">Damages and Relief Summary</a> <span class="pg" data-for="fig-tn-damages"></span></li>
+<li><a href="#fig-tn-dayplan">Day plans</a> <span class="pg" data-for="fig-tn-dayplan"></span></li>
+<li><a href="#tn-proof">Defenses Dashboard and defense charts (Professional)</a> <span class="pg" data-for="tn-proof"></span></li>
+<li><a href="#fig-tn-desig">Deposition designations</a> <span class="pg" data-for="fig-tn-desig"></span></li>
+<li><a href="#typing">Dictation</a> <span class="pg" data-for="typing"></span></li>
+<li><a href="#typing">Drop-down lists</a> <span class="pg" data-for="typing"></span></li>
+</ul></div>
+<div class="azgroup"><h4>E</h4><ul>
+<li><a href="#about">Editions compared</a> <span class="pg" data-for="about"></span></li>
+<li><a href="#tn-proof">Element Reference</a> <span class="pg" data-for="tn-proof"></span></li>
+<li><a href="#fig-tn-script">Exam scripts</a> <span class="pg" data-for="fig-tn-script"></span></li>
+<li><a href="#fig-tn-exhibits">Exhibit lists and status</a> <span class="pg" data-for="fig-tn-exhibits"></span></li>
+<li><a href="#fig-tn-evscript">Exhibit scripts</a> <span class="pg" data-for="fig-tn-evscript"></span></li>
+</ul></div>
+<div class="azgroup"><h4>F</h4><ul>
+<li><a href="#first-tap">First tap is slow</a> <span class="pg" data-for="first-tap"></span></li>
+<li><a href="#fig-tn-chooser">Foundation Chooser</a> <span class="pg" data-for="fig-tn-chooser"></span></li>
+<li><a href="#fig-tn-foundation">Foundation pages</a> <span class="pg" data-for="fig-tn-foundation"></span></li>
+</ul></div>
+<div class="azgroup"><h4>H</h4><ul>
+<li><a href="#fig-tn-header">Header band</a> <span class="pg" data-for="fig-tn-header"></span></li>
+<li><a href="#hn-flow">Hearing Notebook, overview</a> <span class="pg" data-for="hn-flow"></span></li>
+<li><a href="#help">Help and support</a> <span class="pg" data-for="help"></span></li>
+</ul></div>
+<div class="azgroup"><h4>I</h4><ul>
+<li><a href="#fig-tn-impeach">Impeachment Matrix</a> <span class="pg" data-for="fig-tn-impeach"></span></li>
+<li><a href="#fig-tn-instructions">Instructions tracker (jury)</a> <span class="pg" data-for="fig-tn-instructions"></span></li>
+</ul></div>
+<div class="azgroup"><h4>J</h4><ul>
+<li><a href="#ipad">JavaScript setting</a> <span class="pg" data-for="ipad"></span></li>
+<li><a href="#fig-tn-juris">Jurisdiction page</a> <span class="pg" data-for="fig-tn-juris"></span></li>
+</ul></div>
+<div class="azgroup"><h4>L</h4><ul>
+<li><a href="#hn-support">Legal Authorities (Hearing Notebook)</a> <span class="pg" data-for="hn-support"></span></li>
+</ul></div>
+<div class="azgroup"><h4>M</h4><ul>
+<li><a href="#help">Modified copy notice</a> <span class="pg" data-for="help"></span></li>
+<li><a href="#fig-tn-mil">Motions in Limine and Rulings</a> <span class="pg" data-for="fig-tn-mil"></span></li>
+</ul></div>
+<div class="azgroup"><h4>N</h4><ul>
+<li><a href="#tn-notes">Notes (sticky notes)</a> <span class="pg" data-for="tn-notes"></span></li>
+</ul></div>
+<div class="azgroup"><h4>O</h4><ul>
+<li><a href="#chips">Objection chips</a> <span class="pg" data-for="chips"></span></li>
+<li><a href="#fig-tn-objections">Objections page</a> <span class="pg" data-for="fig-tn-objections"></span></li>
+<li><a href="#tn-prep">Opening statement</a> <span class="pg" data-for="tn-prep"></span></li>
+</ul></div>
+<div class="azgroup"><h4>P</h4><ul>
+<li><a href="#fig-tn-panel">Panel Tracker (jury)</a> <span class="pg" data-for="fig-tn-panel"></span></li>
+<li><a href="#ipad">PDF Viewer settings</a> <span class="pg" data-for="ipad"></span></li>
+<li><a href="#hn-prep">Preparation Outline (Hearing Notebook)</a> <span class="pg" data-for="hn-prep"></span></li>
+<li><a href="#apps">Preview, never save in</a> <span class="pg" data-for="apps"></span></li>
+<li><a href="#tn-pro">Print buttons (Professional)</a> <span class="pg" data-for="tn-pro"></span></li>
+<li><a href="#help">Printing</a> <span class="pg" data-for="help"></span></li>
+<li><a href="#help">Privacy of your entries</a> <span class="pg" data-for="help"></span></li>
+<li><a href="#tn-pro">Professional edition extras</a> <span class="pg" data-for="tn-pro"></span></li>
+<li><a href="#fig-tn-claim">Proof charts</a> <span class="pg" data-for="fig-tn-claim"></span></li>
+<li><a href="#fig-tn-dashboard">Proof Dashboard</a> <span class="pg" data-for="fig-tn-dashboard"></span></li>
+</ul></div>
+<div class="azgroup"><h4>R</h4><ul>
+<li><a href="#fig-tn-ready">Readiness Tracker</a> <span class="pg" data-for="fig-tn-ready"></span></li>
+<li><a href="#hn-rebuttal">Rebuttal (Hearing Notebook)</a> <span class="pg" data-for="hn-rebuttal"></span></li>
+<li><a href="#fig-hn-record">Record, The (Hearing Notebook)</a> <span class="pg" data-for="fig-hn-record"></span></li>
+<li><a href="#tn-find">Ribbon (bookmark)</a> <span class="pg" data-for="tn-find"></span></li>
+<li><a href="#fig-tn-roster">Roster (witnesses)</a> <span class="pg" data-for="fig-tn-roster"></span></li>
+<li><a href="#fig-tn-rulings">Rulings During Trial</a> <span class="pg" data-for="fig-tn-rulings"></span></li>
+</ul></div>
+<div class="azgroup"><h4>S</h4><ul>
+<li><a href="#tn-exam">Scripts (Exam tab)</a> <span class="pg" data-for="tn-exam"></span></li>
+<li><a href="#hn-support">Sources (Hearing Notebook)</a> <span class="pg" data-for="hn-support"></span></li>
+<li><a href="#hn-speak">Speaking Outline</a> <span class="pg" data-for="hn-speak"></span></li>
+<li><a href="#fig-tn-start">Start Here</a> <span class="pg" data-for="fig-tn-start"></span></li>
+<li><a href="#tn-pro">State rules (Professional)</a> <span class="pg" data-for="tn-pro"></span></li>
+<li><a href="#tn-notes">Sticky notes</a> <span class="pg" data-for="tn-notes"></span></li>
+<li><a href="#fig-tn-stip">Stipulations</a> <span class="pg" data-for="fig-tn-stip"></span></li>
+</ul></div>
+<div class="azgroup"><h4>T</h4><ul>
+<li><a href="#tn-find">Tabs</a> <span class="pg" data-for="tn-find"></span></li>
+<li><a href="#tn-close">Their Best Arguments and Our Answers</a> <span class="pg" data-for="tn-close"></span></li>
+<li><a href="#fig-tn-cover">Title page</a> <span class="pg" data-for="fig-tn-cover"></span></li>
+<li><a href="#fig-tn-log">Trial Log</a> <span class="pg" data-for="fig-tn-log"></span></li>
+<li><a href="#help">Troubleshooting</a> <span class="pg" data-for="help"></span></li>
+<li><a href="#help">Two versions of a file</a> <span class="pg" data-for="help"></span></li>
+</ul></div>
+<div class="azgroup"><h4>V</h4><ul>
+<li><a href="#tn-jury">Verdict Form Notes</a> <span class="pg" data-for="tn-jury"></span></li>
+<li><a href="#fig-tn-voirdire">Voir Dire Question Bank</a> <span class="pg" data-for="fig-tn-voirdire"></span></li>
+</ul></div>
+<div class="azgroup"><h4>W</h4><ul>
+<li><a href="#apps">Windows (use Acrobat Reader)</a> <span class="pg" data-for="apps"></span></li>
+<li><a href="#fig-tn-direct">Witness outlines: profile, direct, cross</a> <span class="pg" data-for="fig-tn-direct"></span></li>
+</ul></div>
+<div class="azgroup"><h4>Y</h4><ul>
+<li><a href="#typing">Yellow tint while typing</a> <span class="pg" data-for="typing"></span></li>
+</ul></div>
+</div>
 </section>
 
 </div></main>
