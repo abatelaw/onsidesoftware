@@ -88,7 +88,6 @@ body { background: var(--bg); color: var(--fg); font-family: var(--body); font-s
 .ribbon { height: 6px; background: linear-gradient(90deg, var(--teal) 0 25%, var(--rust) 25% 50%, var(--silver) 50% 75%, var(--wine) 75% 100%); }
 header { --w: clamp(220px, 60vw, 340px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; margin-bottom: 56px; }
 .logo { display: block; width: var(--w); height: auto; margin-left: calc(var(--w) * -0.013875); }
-.tag { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; padding-left: calc(var(--w) * 0.013556 - 0.75px); }
 h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.1; letter-spacing: -0.01em; text-wrap: balance; margin: 0 0 18px; max-width: 18ch; }
 .lede { font-size: 1.15rem; color: var(--muted); max-width: 36rem; margin: 0; }
 section { padding-block: 52px; }
@@ -136,6 +135,8 @@ footer a { color: var(--on-ink-muted); }
 header .tmlogo .tmark { margin-top: calc(var(--w) * 0.03); }
 .tab::after { content: "\2122"; font-size: 0.6em; vertical-align: super; margin-left: 1px; }
 @media (max-width: 520px) { dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 14px; } }
+/* On a phone the top band is shorter, so the product card shows on the first screen (2026-10-17). */
+@media (max-width: 520px) { .hero { padding-block: 20px 30px; } header { margin-bottom: 26px; } h1 { margin-bottom: 12px; } .lede { font-size: 1.05rem; } .products { padding-top: 32px; } }
 </style>
 <style>html{color-scheme:light dark}body{margin:0}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"OnSide Software, Inc.","url":"https://www.onsidesoftware.com/","logo":"https://www.onsidesoftware.com/logo.svg","email":"info@onsidesoftware.com","telephone":"+1-602-641-9494","description":"OnSide Software, Inc. builds applications for lawyers and legal teams.","address":{"@type":"PostalAddress","streetAddress":"300 W. Clarendon Ave., Ste. 130","addressLocality":"Phoenix","addressRegion":"AZ","postalCode":"85013","addressCountry":"US"}}</script>
@@ -146,7 +147,6 @@ header .tmlogo .tmark { margin-top: calc(var(--w) * 0.03); }
 <div class="hero"><div class="inner">
   <header>
     <span class="tmlogo"><img class="logo" alt="OnSide Software" width="1254" height="523" src="logo.svg"><sup class="tmark" aria-hidden="true">&trade;</sup></span>
-    <div class="tag">Phoenix, Arizona</div>
   </header>
   <h1>Software for the practice of law.</h1>
   <p class="lede">OnSide Software, Inc. builds applications for lawyers and legal teams. We make tools that fit how legal work is actually done.</p>
