@@ -27,8 +27,9 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--bo
 .ribbon { height: 6px; background: linear-gradient(90deg, var(--teal) 0 25%, var(--rust) 25% 50%, var(--wine) 50% 75%, var(--silver) 75% 100%); }
 header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; margin-bottom: 32px; }
 .logo { display: block; width: clamp(150px, 30vw, 200px); height: auto; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo { background: #ffffff; padding: 8px 12px; border-radius: 6px; } }
-:root[data-theme="dark"] .logo { background: #ffffff; padding: 8px 12px; border-radius: 6px; }
+/* The top band keeps its light colors in dark mode, so the logo sits on a full-width light strip, as on a desktop in light mode (2026-10-17). */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero { --band: #e8ecf2; --fg: #000000; --muted: #333a45; --accent: #495264; color: var(--fg); color-scheme: light; } }
+:root[data-theme="dark"] .hero { --band: #e8ecf2; --fg: #000000; --muted: #333a45; --accent: #495264; color: var(--fg); color-scheme: light; }
 nav.site { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
 nav.site a { color: var(--muted); text-decoration: none; }
 nav.site a:hover, nav.site a[aria-current="page"] { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
