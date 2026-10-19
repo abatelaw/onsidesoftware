@@ -126,6 +126,8 @@ h2.big { font-size: clamp(2rem, 4.6vw, 3.25rem); line-height: 1.08; margin: 0 0 
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: 48px; align-items: center; padding-block: 72px 84px; }
 .hero h1 { font-size: clamp(2.5rem, 5.6vw, 4.25rem); line-height: 1.03; margin: 0 0 22px; max-width: 13ch; }
 .hero .lede { font-size: 1.2rem; color: #3d4552; margin: 0 0 30px; max-width: 32rem; }
+/* The hero's top line is set in the lede's typeface (IBM Plex Sans), not the mono section labels (Nino, 2026-10-18). */
+.hero .eyebrow { font-family: var(--body); font-size: 1.05rem; font-weight: 500; letter-spacing: 0; text-transform: none; color: #3d4552; margin-bottom: 12px; }
 .hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
 .hero .launch { display: flex; align-items: center; gap: 12px; font-size: .95rem; color: #3d4552; margin: 0; }
 .hero .launch .icons { display: flex; }
