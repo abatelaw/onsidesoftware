@@ -261,6 +261,21 @@ h3.logo-h { margin: 0; line-height: 1; }
 .suite .btn-primary { background: #2b3240; }
 @media (max-width: 960px) { .suite { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; } }
 
+/* Pricing is compact so the three app cards and the OnSide Suite card fit on one laptop screen after the Pricing link (Nino, 2026-10-18). */
+.pricing { padding-top: 56px; }
+#pricing { scroll-margin-top: -44px; }  /* the Pricing link lands on the heading, not the empty space above it */
+.pricing .center .eyebrow { margin-bottom: 8px; }
+.pricing h2.big { margin-bottom: 8px; }
+.pricing .pgrid:not(.two) { margin-top: 28px; gap: 16px; }
+.pricing .pgrid:not(.two) .price { padding: 22px 24px 20px; gap: 10px; }
+.pricing .pgrid:not(.two) .price .amt { font-size: 1.35rem; }
+.pricing .pgrid:not(.two) .price ul { gap: 2px; font-size: .93rem; }
+.suite { margin-top: 16px; padding: 26px 34px 30px; gap: 28px; }
+.suite h3 { font-size: clamp(1.6rem, 3vw, 2rem); }
+.suite .suite-tag { margin: 2px 0 8px; font-size: 1.2rem; }
+.suite-buy { padding: 18px 22px; gap: 10px; }
+.suite .amt { font-size: 1.35rem; }
+
 /* FAQ */
 .faq { padding-block: 80px 96px; }
 .faq .wrap { max-width: 52rem; }
@@ -536,7 +551,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
     <div class="center">
       <p class="eyebrow">Pricing</p>
       <h2 class="big" id="h-pricing">Buy directly from us.</h2>
-      <p class="sub">Every OnSide product will be sold here, on onsidesoftware.com. Prices for the applications will be announced before launch.</p>
+      <p class="sub">Sold directly at onsidesoftware.com. Prices will be announced before launch.</p>
     </div>
     <div class="pgrid">
       <div class="price" style="--c:var(--teal)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTime" width="534" height="119" src="assets/logos/ontime.png" style="height:36px"><sup aria-hidden="true">&trade;</sup></span></h3><p class="amt">Price at launch<small>COMING DECEMBER 1, 2026</small></p><ul><li>Mac and Windows</li><li>Draft time entries, sent to Clio</li></ul><a class="btn btn-ghost btn-sm" href="mailto:info@onsidesoftware.com?subject=OnTime%20launch">Tell me at launch</a></div>
