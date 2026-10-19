@@ -1,0 +1,7 @@
+# Cloudflare Pages response headers (onsidesoftware.com).
+# Caching is left at Cloudflare's default (public, max-age=0, must-revalidate): browsers check with the server on
+# every visit, so a change shows on the next reload. A Cache-Control line here would be added to that default, not replace it.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
