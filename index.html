@@ -246,6 +246,21 @@ h3.logo-h { margin: 0; line-height: 1; }
 :root[data-theme="dark"] .ptitle .wordmark { background: #ffffff; padding: 8px 14px; border-radius: 12px; }
 :root[data-theme="dark"] .price .btn-ghost { color: #0b0f14; }
 
+/* OnSide Suite bundle card */
+.suite { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 40px; align-items: center; margin-top: 20px; padding: 40px 44px; border-radius: var(--r-lg); background: var(--ink-deep); color: #ffffff; position: relative; overflow: hidden; }
+.suite::after { content: ""; position: absolute; inset: auto 0 0 0; height: 6px; background: linear-gradient(90deg, var(--teal) 0 33.33%, var(--rust) 33.33% 66.66%, var(--silver) 66.66% 100%); }
+.suite .eyebrow { color: #c9d0dc; margin-bottom: 8px; }
+.suite h3 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin: 0; line-height: 1.1; }
+.suite .suite-tag { font-family: var(--display); font-size: 1.3rem; margin: 6px 0 12px; color: #ffffff; }
+.suite p { margin: 0; color: #c9d0dc; }
+.suite-buy { display: grid; gap: 16px; justify-items: start; background: #ffffff; color: #0b0f14; border-radius: var(--r-md); padding: 24px 26px; }
+.suite-logos { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.suite-logos .wordmark sup { color: #0b0f14; font-size: .65rem; }
+.suite .amt { font-family: var(--display); font-size: 1.6rem; font-weight: 700; margin: 0; line-height: 1.1; color: #0b0f14; }
+.suite .amt small { display: block; font-family: var(--mono); font-weight: 400; font-size: .78rem; color: #3d4552; margin-top: 6px; letter-spacing: .02em; }
+.suite .btn-primary { background: #2b3240; }
+@media (max-width: 960px) { .suite { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; } }
+
 /* FAQ */
 .faq { padding-block: 80px 96px; }
 .faq .wrap { max-width: 52rem; }
@@ -384,6 +399,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
       <a class="app-card" href="#onfile" style="--tint:var(--tint-silver);--c:var(--silver-ink)"><h3 class="logo-h"><span class="wordmark"><img alt="OnFile" width="449" height="124" src="assets/logos/onfile.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>Checks your filing and fills in the court&rsquo;s e-filing screens.</p><span class="more">Learn more &rarr;</span></a>
       <a class="app-card" href="#ontrial" style="--tint:var(--tint-wine);--c:var(--wine)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTrial" width="507" height="119" src="assets/logos/ontrial.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>The ultimate digital trial notebook, in one fillable PDF.</p><span class="more">Learn more &rarr;</span></a>
     </div>
+    <p class="also">Want all three apps? Get them together in the <a href="#suite">OnSide Suite</a>.</p>
   </div>
 </section>
 
@@ -527,6 +543,20 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
       <div class="price" style="--c:var(--silver)"><h3 class="logo-h"><span class="wordmark"><img alt="OnFile" width="449" height="124" src="assets/logos/onfile.png" style="height:36px"><sup aria-hidden="true">&trade;</sup></span></h3><p class="amt">Price at launch<small>COMING DECEMBER 1, 2026</small></p><ul><li>Mac and Windows</li><li>AZTurboCourt, eFileAZ and CM/ECF</li></ul><a class="btn btn-ghost btn-sm" href="mailto:info@onsidesoftware.com?subject=OnFile%20launch">Tell me at launch</a></div>
     </div>
 
+    <div class="suite" id="suite">
+      <div class="suite-text">
+        <p class="eyebrow">Bundle &middot; All three apps</p>
+        <h3>OnSide Suite</h3>
+        <p class="suite-tag">Draft it. File it. Bill it.</p>
+        <p>OnTrac keeps every draft. OnFile gets it filed. OnTime makes sure you&rsquo;re paid for it. One purchase covers your workflow from first draft to final invoice, for less than buying the three apps separately.</p>
+      </div>
+      <div class="suite-buy">
+        <div class="suite-logos"><span class="wordmark"><img alt="OnTime" width="534" height="119" src="assets/logos/ontime.png" style="height:24px"><sup aria-hidden="true">&trade;</sup></span><span class="wordmark"><img alt="OnTrac" width="487" height="122" src="assets/logos/ontrac.png" style="height:24px"><sup aria-hidden="true">&trade;</sup></span><span class="wordmark"><img alt="OnFile" width="449" height="124" src="assets/logos/onfile.png" style="height:24px"><sup aria-hidden="true">&trade;</sup></span></div>
+        <p class="amt">Price at launch<small>COMING DECEMBER 1, 2026 &middot; MAC AND WINDOWS</small></p>
+        <a class="btn btn-primary btn-sm" href="mailto:info@onsidesoftware.com?subject=OnSide%20Suite%20launch">Tell me at launch</a>
+      </div>
+    </div>
+
     <h3 class="ptitle"><span class="wordmark"><img alt="OnTrial" width="507" height="119" src="assets/logos/ontrial.png" style="height:40px"><sup aria-hidden="true">&trade;</sup></span><span>Notebook editions</span></h3>
     <div class="pgrid two">
       <div class="price" style="--c:var(--silver)">
@@ -566,6 +596,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
     <details><summary>Do my documents leave my computer?</summary><p>OnTrac runs on your computer, and your documents never leave it. In the OnTrial Notebook, what you type stays on your device. Our products do not send what you type to us. OnTime sends approved time entries to your billing software, such as Clio, and only after you approve them.</p></details>
     <details><summary>Does OnTime work with Clio?</summary><p>Yes. OnTime prepares draft time entries for your review and, once you approve them, sends them to your billing software, such as Clio.</p></details>
     <details><summary>Which courts does OnFile support?</summary><p>OnFile fills in the screens of AZTurboCourt, eFileAZ and federal CM/ECF, attaches your exhibits, and stops for you to click submit.</p></details>
+    <details><summary>Can I buy all three apps together?</summary><p>Yes. The <a href="#suite">OnSide Suite</a> includes OnTime, OnTrac and OnFile, for less than buying them separately. Pricing will be announced before launch.</p></details>
     <details><summary>What do I need to use the OnTrial Notebook?</summary><p>OnTrial runs in Adobe Acrobat Reader on Mac or Windows and in PDF Viewer by Nutrient on the iPad, both free. The <a href="/manual/">User Manual</a> walks through every page.</p></details>
     <details><summary>How is OnTrial licensed?</summary><p>One license per lawyer. All sales are final. The <a href="/terms/">Terms of Service</a> have the details, and you can <a href="/verify/">verify a copy</a> of an OnTrial Notebook.</p></details>
     <details><summary>Is OnSide a law firm?</summary><p>No. OnSide Software, Inc. is a software company. It is not a law firm and does not provide legal advice.</p></details>
