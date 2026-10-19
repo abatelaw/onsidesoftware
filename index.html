@@ -278,6 +278,7 @@ h3.logo-h { margin: 0; line-height: 1; }
 .closer .ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
 .company { border-top: 1px solid var(--rule); }
 
+[tabindex="-1"]:focus { outline: none; }
 /* Company and contact */
 .company { background: var(--band); padding-block: 80px; }
 .company .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; }
@@ -643,6 +644,30 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
   </div>
 </footer>
 
+<script>
+/* Section links scroll within the page without adding #section to the address, so the bar always reads onsidesoftware.com (Nino, 2026-10-18).
+   Links that arrive with a section (onsidesoftware.com/#ontrial) still open at that section; the # part is then dropped. */
+(function () {
+  function clean() { if (location.hash && history.replaceState) history.replaceState(null, "", location.pathname + location.search); }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var id = a.getAttribute("href").slice(1), el = id && document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView();
+    if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");
+    el.focus({ preventScroll: true });
+  });
+  function arrive() {  /* scroll to the section named in the address, then drop the # part */
+    var el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (el) el.scrollIntoView({ behavior: "instant" });
+    clean();
+  }
+  if (location.hash) { if (document.readyState === "complete") arrive(); else window.addEventListener("load", function () { setTimeout(arrive, 0); }); }
+  window.addEventListener("hashchange", arrive);
+})();
+</script>
 <link rel="stylesheet" href="/assets/help.css">
 <script src="/assets/help.js" defer></script>
 </body>
