@@ -314,7 +314,7 @@ h3.logo-h { margin: 0; line-height: 1; }
 .company p { margin: 0 0 14px; color: var(--muted); max-width: 34rem; }
 .company h2 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin: 0 0 16px; }
 .company .wrap > div > p:last-child { margin-bottom: 0; }
-dl { display: grid; grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr); gap: 12px 24px; margin: 0; align-content: space-between; padding-top: 6px; }
+dl { display: grid; grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr); gap: 12px 24px; margin: calc(1.6 * clamp(1.8rem, 3.4vw, 2.4rem) + 16px) 0 0; align-content: space-between; }
 dt { font-family: var(--body); font-size: .8rem; color: var(--muted); padding-top: 3px; }
 dd { margin: 0; overflow-wrap: anywhere; }
 .email { font-family: var(--mono); font-size: .98rem; user-select: all; }
@@ -341,7 +341,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
   .pgrid.two { grid-template-columns: 1fr; }
   .fcard, .trial .fcard { grid-template-columns: 1fr; padding: 40px 28px; gap: 36px; }
   .fcard.flip .ftext { order: 0; }
-  .company .wrap { grid-template-columns: 1fr; gap: 32px; }
+  .company .wrap { grid-template-columns: 1fr; gap: 32px; } dl { margin-top: 0; }
   .fgrid { grid-template-columns: 1fr 1fr; }
   .fgrid > :first-child { grid-column: 1 / -1; }
 }
