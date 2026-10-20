@@ -313,7 +313,8 @@ h3.logo-h { margin: 0; line-height: 1; }
 .company .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; }
 .company p { margin: 0 0 14px; color: var(--muted); max-width: 34rem; }
 .company h2 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin: 0 0 16px; }
-dl { display: grid; grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr); gap: 12px 24px; margin: 0; }
+.company .wrap > div > p:last-child { margin-bottom: 0; }
+dl { display: grid; grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr); gap: 12px 24px; margin: 0; align-content: space-between; padding-top: 6px; }
 dt { font-family: var(--body); font-size: .8rem; color: var(--muted); padding-top: 3px; }
 dd { margin: 0; overflow-wrap: anywhere; }
 .email { font-family: var(--mono); font-size: .98rem; user-select: all; }
@@ -663,7 +664,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
     </div>
     <dl>
       <dt>Legal name</dt><dd>OnSide Software, Inc.</dd>
-      <dt>Incorporated</dt><dd>Delaware</dd><dt>Delaware file number</dt><dd>10768179</dd>
+      <dt>Incorporated</dt><dd>Delaware</dd>
       <dt>Principal office</dt><dd>300 W. Clarendon Ave., Ste. 130<br>Phoenix, AZ 85013</dd>
       <dt>Phone</dt><dd>(602) 641-9494</dd><dt>Email</dt><dd><span class="email">info@onsidesoftware.com</span></dd><dt>Support</dt><dd><span class="email">support@onsidesoftware.com</span></dd>
     </dl>
