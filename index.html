@@ -214,6 +214,7 @@ h3.logo-h { margin: 0; line-height: 1; }
 .fcard h3 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.08; margin: 4px 0 0; }
 .fcard p { margin: 0; color: var(--card-muted); font-size: 1.05rem; }
 .ticks { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; }
+.fcard .fnote { margin: 0; color: var(--card-muted); font-size: .9rem; }
 .ticks li { position: relative; padding-left: 30px; }
 .ticks li::before { content: ""; position: absolute; left: 0; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: var(--c); -webkit-mask: none; }
 .ticks li::after { content: ""; position: absolute; left: 6px; top: 8px; width: 5px; height: 8px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
@@ -472,12 +473,13 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
         <div class="fhead"><span class="wordmark"><img alt="OnTrac" width="487" height="122" src="assets/logos/ontrac.png" style="height:52px"><sup aria-hidden="true">&trade;</sup></span></div>
         <div class="meta"><span>Mac and Windows</span><span>&middot;</span><span>Coming December 1, 2026</span><strong class="pp">Patent pending</strong></div>
         <h3 id="h-ontrac">Three Problems. One Solution.</h3>
-        <p>OnTrac tracks your discovery, saves a numbered, labeled version of a Word or Excel draft with one keystroke, and keeps your matter folders in order. It runs quietly in the background, and your documents never leave your computer.</p>
+        <p>OnTrac tracks your discovery, saves a numbered, labeled version of a Word or Excel draft with one keystroke, and keeps your matter folders in order. It runs quietly in the background, and your documents never leave your computer.*</p>
         <ul class="ticks">
           <li><strong>Discovery tracking:</strong> every request, response and disclosure, with its due date</li>
           <li><strong>Document versioning:</strong> one keystroke saves a numbered, labeled version you can go back to</li>
           <li><strong>File organizing:</strong> new files put where they belong</li>
         </ul>
+        <p class="fnote">*If you turn on the optional Claude connector when it ships, what Claude reads goes to Anthropic under your own Claude account.</p>
       </div>
       <div class="fart" aria-hidden="true">
         <div class="win">
@@ -635,7 +637,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
       <h2 class="big" id="h-faq">Frequently asked questions</h2>
     </div>
     <details><summary>When can I get OnTime, OnTrac and OnFile?</summary><p>All three are coming December 1, 2026, for Mac and Windows. To hear when they are ready, email <a href="mailto:info@onsidesoftware.com?subject=Tell%20me%20when%20OnSide%20launches">info@onsidesoftware.com</a>.</p></details>
-    <details><summary>Do my documents leave my computer?</summary><p>Only when you send them somewhere. OnTrac runs on your computer, and your documents never leave it. In the OnTrial Notebook, what you type stays on your device. OnTime keeps your activity on your computer and sends time entries to Clio only after you approve them. OnFile sends your filing to the court&rsquo;s portal; the case list it shares with your firm is encrypted so that OnSide cannot read it.</p></details>
+    <details><summary>Do my documents leave my computer?</summary><p>Only when you send them somewhere. OnTrac runs on your computer, and your documents never leave it.* In the OnTrial Notebook, what you type stays on your device. OnTime keeps your activity on your computer and sends time entries to Clio only after you approve them. OnFile sends your filing to the court&rsquo;s portal; the case list it shares with your firm is encrypted so that OnSide cannot read it.</p><p>*If you turn on the optional Claude connector when it ships, what Claude reads goes to Anthropic under your own Claude account.</p></details>
     <details><summary>Does OnTime work with Clio?</summary><p>Yes. OnTime prepares draft time entries for your review and, once you approve them, sends them to Clio. More billing systems are planned.</p></details>
     <details><summary>Which courts does OnFile support?</summary><p>At launch, Arizona&rsquo;s state courts through AZTurboCourt and eFileAZ, and the U.S. District Court and Bankruptcy Court for the District of Arizona through CM/ECF. OnFile fills in the screens, attaches your exhibits, and stops for you to review and submit. It never pays a filing fee for you.</p></details>
     <details><summary>Can I buy all three apps together?</summary><p>Yes. The <a href="#suite">OnSide Suite</a> includes OnTime, OnTrac and OnFile, for less than buying them separately. Pricing will be announced before launch.</p></details>
