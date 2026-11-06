@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects (onsidesoftware.com).
+# OnFile's sign-up link: /go/<channel> goes to OnSide's service, which sends the visitor to Stripe's card page.
+/go/* https://onfile-service.onsidesoftware.workers.dev/go/:splat 302
