@@ -164,6 +164,13 @@
 .quiet .pf-sheet { border: 1px solid var(--line); border-top: 3px solid var(--c); border-radius: var(--r); box-shadow: none; }
 .quiet .pp-shot { border-width: 1px; border-color: var(--line); border-radius: var(--r); box-shadow: none; }
 
+/* ---------- OnTime's two-line headline, "Time is money — now get more of both" (founder, 2026-11-11): a wider left column
+   so the second line fits on one line ---------- */
+@media (min-width: 961px) { .quiet.prod-ontime .pp-open .wrap { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); } }
+/* and the heading scales with its column, so the second line never wraps (it is about 10.6 times the type size wide) */
+.quiet.prod-ontime .pp-open .wrap > div:first-child { container-type: inline-size; }
+.quiet.prod-ontime .pp-open h1 { font-size: min(var(--t-title), 9.2cqi); }
+
 /* the help button and panel, as on the rest of the site */
 .quiet-page .hp-open { border-radius: 6px; box-shadow: none; }
 .quiet-page .hp-panel { border-radius: 8px; box-shadow: 0 1px 3px rgba(16,24,40,.12), 0 0 0 1px #d5d9e0; }
