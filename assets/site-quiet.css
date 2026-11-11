@@ -1,0 +1,90 @@
+/* The toned-down look for the home page, News and the 404 page (they share one set of styles), and a light touch
+   on the document pages (Terms, Privacy, Verify, Manual), which were plain already.
+   White ground, ink type, thin rules. Each product's color is kept for small things: a rule, a label, a link.
+   No gradients, no shadows, no tinted cards, no pills, nothing that lifts or tilts. */
+.quiet-page { --r: 6px; --line: #dcdfe5; --band2: #f5f6f8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .quiet-page { --line: rgba(255,255,255,.14); --band2: #141b22; } }
+:root[data-theme="dark"] .quiet-page { --line: rgba(255,255,255,.14); --band2: #141b22; }
+
+.quiet-page .ribbon { height: 4px; }
+.quiet-page h2.big, .quiet-page h1.big { font-size: clamp(1.75rem, 3.4vw, 2.375rem); line-height: 1.12; margin: 0 0 8px; }
+.quiet-page .order-page .pricing { padding-block: 56px 72px; }
+
+/* buttons: plain rectangles */
+.quiet-page .btn { border-radius: var(--r); box-shadow: none; }
+.quiet-page .btn:hover { transform: none; }
+.quiet-page .btn-ghost { border-width: 1px; }
+
+/* the hero: flat, one app window, nothing tilted behind it */
+.quiet-page .hero { background: #f5f6f8; border-bottom: 1px solid #dcdfe5; }
+.quiet-page .hero .wrap { padding-block: 60px 64px; }
+.quiet-page .hero h1 { font-size: clamp(2.5rem, 5vw, 3.625rem); line-height: 1.05; }
+.quiet-page .stage .back { display: none; }
+.quiet-page .win { border-radius: 8px; box-shadow: 0 1px 3px rgba(16,24,40,.08), 0 0 0 1px #d5d9e0; }
+.quiet-page .hero .launch .icons img { box-shadow: 0 0 0 1px #d5d9e0; }
+
+/* the hero has no buttons: its four product logos, side by side as before, are plain links to the product pages.
+   No boxes, arrows or hover effects (founder, 2026-11-10: visitors "are smart enough to click on them themselves"). */
+.quiet-page .hero .lede { margin-bottom: 26px; }
+.quiet-page .hero .logo-link { display: inline-flex; text-decoration: none; color: inherit; }
+.quiet-page .hero .logo-link:focus-visible { outline: 3px solid var(--c); outline-offset: 4px; border-radius: 2px; }
+
+/* the four product cards: white, ruled, a thin rule of the product's color on top */
+.quiet-page .apps { padding-block: 68px 36px; }
+.quiet-page .app-grid { margin-top: 36px; }
+/* the product logos are dark ink, so these cards keep a white ground in dark mode too, as the price cards do */
+.quiet-page .app-card { border: 1px solid var(--line); border-top: 3px solid var(--c); border-radius: var(--r); background: #ffffff; color: #0b0f14; padding: 26px 24px 24px; transition: none; }
+.quiet-page .app-card:hover { transform: none; box-shadow: none; border-color: var(--c); }
+.quiet-page .app-card p { color: #3d4552; }
+
+/* feature cards, where a page has them */
+.quiet-page .fcard { border: 1px solid var(--line); border-top: 3px solid var(--c); border-radius: var(--r); background: #ffffff; color: #0b0f14; padding: 48px; }
+.quiet-page .fcard p, .quiet-page .fcard .fnote, .quiet-page .fcard .meta { color: #3d4552; }
+.quiet-page .ticks li::before { background: none; }
+.quiet-page .ticks li::after { left: 5px; top: 5px; width: 6px; height: 11px; border-color: var(--c); }
+.quiet-page .pp { border: 1px solid currentColor; background: none; color: #9a3412; font-weight: 500; }
+
+/* the values band: one flat ink band, ruled tiles, smaller numerals */
+.quiet-page .values { margin-top: 56px; padding-block: 68px; }
+.quiet-page .vgrid { margin-top: 36px; gap: 0; border-top: 1px solid rgba(255,255,255,.22); }
+.quiet-page .vtile { border: 0; border-radius: 0; background: none; padding: 26px 28px 4px 0; }
+.quiet-page .vtile + .vtile { padding-left: 28px; border-left: 1px solid rgba(255,255,255,.22); }
+.quiet-page .vtile .num { font-size: 2.375rem; }
+
+/* pricing: flat ruled cards; the offer tags become quiet outlined labels */
+.quiet-page .price { border-radius: var(--r); }
+.quiet-page .price::before { height: 3px; border-radius: 0; }
+.quiet-page .price.pro { box-shadow: none; }
+.quiet-page .otag, .quiet-page .ltag { border: 1px solid currentColor; border-radius: 3px; background: none; padding: 4px 8px 3px; font-family: var(--mono); font-weight: 400; font-size: .75rem; letter-spacing: .1em; }
+.quiet-page .otag { color: #9a2a1a; }
+.quiet-page .ltag { color: #2f6347; }
+.quiet-page .suite { border-radius: var(--r); }
+.quiet-page .suite::after { height: 3px; }
+.quiet-page .suite-buy { border-radius: var(--r); }
+.quiet-page .suite .otag { color: #9a2a1a; }
+.quiet-page .ptitle .wordmark { border-radius: var(--r) !important; }
+
+/* the closing band and the company band: flat */
+.quiet-page .closer { background: #f5f6f8; padding-block: 64px; }
+.quiet-page .faq { padding-block: 60px 72px; }
+.quiet-page .company { padding-block: 60px; }
+
+/* News and 404 */
+.quiet-page .card { border-radius: var(--r); box-shadow: none; }
+.quiet-page .signup .card, .quiet-page .news-apps .app-card { box-shadow: none; }
+
+/* the help button and panel */
+.quiet-page .hp-open { border-radius: var(--r); box-shadow: none; }
+.quiet-page .hp-panel { border-radius: 8px; box-shadow: 0 1px 3px rgba(16,24,40,.12), 0 0 0 1px #d5d9e0; }
+
+@media (max-width: 960px) {
+  .quiet-page .vgrid { border-top: 0; }
+  .quiet-page .vtile, .quiet-page .vtile + .vtile { padding: 22px 0 6px; border-left: 0; border-top: 1px solid rgba(255,255,255,.22); }
+  .quiet-page .fcard { padding: 32px 24px; }
+}
+@media (max-width: 520px) {
+  .quiet-page .hero .wrap { padding-block: 36px 44px; }
+  .quiet-page .apps { padding-block: 48px 20px; }
+  .quiet-page .values { padding-block: 48px; margin-top: 40px; }
+  .quiet-page .fcard { border-radius: var(--r); }
+}

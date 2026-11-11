@@ -24,7 +24,7 @@
 <meta name="description" content="OnSide Software, Inc. builds applications for lawyers and legal teams: OnTime, OnTrac and OnFile for Mac and Windows, and the OnTrial Notebook. Phoenix, Arizona.">
 
 <script>/* Old section links such as onsidesoftware.com/#ontrial now open that product's own page (2026-10-21). Also runs when only the # part of the address changes. */
-(function(){var m={"#ontime":"/ontime/","#ontrac":"/ontrac/","#onfile":"/onfile/","#ontrial":"/ontrial/"};function go(){var t=m[(location.hash||"").toLowerCase()];if(t)location.replace(t);}go();window.addEventListener("hashchange",go);})();</script>
+(function(){var m={"#ontime":"/ontime/","#ontrac":"/ontrac/","#onfile":"/onfile/","#ontrial":"/ontrial/","#pricing":"/order/","#suite":"/order/#suite"};function go(){var t=m[(location.hash||"").toLowerCase()];if(t)location.replace(t);}go();window.addEventListener("hashchange",go);})();</script>
 <style>
 @font-face {
   font-family: 'IBM Plex Mono';
@@ -380,14 +380,15 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .app-card { transition: none; } .btn:hover, .app-card:hover { transform: none; } }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"OnSide Software, Inc.","url":"https://www.onsidesoftware.com/","logo":"https://www.onsidesoftware.com/logo.svg","email":"info@onsidesoftware.com","telephone":"+1-602-641-9494","description":"OnSide Software, Inc. builds applications for lawyers and legal teams.","address":{"@type":"PostalAddress","streetAddress":"300 W. Clarendon Ave., Ste. 130","addressLocality":"Phoenix","addressRegion":"AZ","postalCode":"85013","addressCountry":"US"}}</script>
+<link rel="stylesheet" href="/assets/site-quiet.css">
 </head>
-<body>
+<body class="quiet-page">
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="OnSide Software home"><img alt="OnSide Software" width="1254" height="523" src="logo.svg"><sup aria-hidden="true">&trade;</sup></a>
+    <a class="brand" href="/" aria-label="OnSide Software home"><img alt="OnSide Software" width="1254" height="523" src="/logo.svg"><sup aria-hidden="true">&trade;</sup></a>
     <nav aria-label="Site">
-      <a href="/ontime/">OnTime</a><a href="/ontrac/">OnTrac</a><a href="/onfile/">OnFile</a><a href="/ontrial/">OnTrial</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/news/">News</a><a href="#contact">Contact</a>
+      <a href="/ontime/">OnTime</a><a href="/ontrac/">OnTrac</a><a href="/onfile/">OnFile</a><a href="/ontrial/">OnTrial</a><a href="#faq">FAQ</a><a href="/news/">News</a><a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-primary btn-sm" href="/news/">Get launch news</a>
   </div>
@@ -400,11 +401,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
       <p class="eyebrow">Software for the practice of law &middot; Mac and Windows</p>
       <h1>Work smarter, not harder.</h1>
       <p class="lede">OnSide apps take the busywork off your desk. They capture your time, keep your drafts and discovery in order, and fill in the court&rsquo;s e-filing screens, so your day goes to the work only a lawyer can do.</p>
-      <div class="ctas">
-        <a class="btn btn-primary" href="#apps">Explore the apps</a>
-        <a class="btn btn-ghost" href="#pricing">See pricing</a>
-      </div>
-      <p class="launch"><span class="logos"><span class="wordmark"><img alt="OnTime" width="534" height="119" src="assets/logos/ontime.png" style="height:26px"><sup aria-hidden="true">&trade;</sup></span><span class="wordmark"><img alt="OnTrac" width="487" height="122" src="assets/logos/ontrac.png" style="height:26px"><sup aria-hidden="true">&trade;</sup></span><span class="wordmark"><img alt="OnFile" width="449" height="124" src="assets/logos/onfile.png" style="height:26px"><sup aria-hidden="true">&trade;</sup></span><span class="wordmark"><img alt="OnTrial" width="507" height="119" src="assets/logos/ontrial.png" style="height:26px"><sup aria-hidden="true">&trade;</sup></span></span><span>Arriving December 1, 2026.</span></p>
+      <p class="launch"><span class="logos"><a class="logo-link" href="/ontime/" style="--c:var(--teal)"><span class="wordmark"><img alt="OnTime" width="534" height="119" src="/assets/logos/ontime.png" style="height:26px"><sup aria-hidden="true">&trade;</sup></span></a><a class="logo-link" href="/ontrac/" style="--c:var(--rust)"><span class="wordmark"><img alt="OnTrac" width="487" height="122" src="/assets/logos/ontrac.png" style="height:26px"><sup aria-hidden="true">&trade;</sup></span></a><a class="logo-link" href="/onfile/" style="--c:var(--silver-ink)"><span class="wordmark"><img alt="OnFile" width="449" height="124" src="/assets/logos/onfile.png" style="height:26px"><sup aria-hidden="true">&trade;</sup></span></a><a class="logo-link" href="/ontrial/" style="--c:var(--wine)"><span class="wordmark"><img alt="OnTrial" width="507" height="119" src="/assets/logos/ontrial.png" style="height:26px"><sup aria-hidden="true">&trade;</sup></span></a></span><span>Arriving December 1, 2026.</span></p>
     </div>
     <div class="stage" aria-hidden="true">
       <div class="win back">
@@ -437,12 +434,12 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
     <h2 class="big">Three apps and a trial notebook.</h2>
     <p class="sub">OnTime, OnTrac and OnFile run in the background on your Mac or Windows computer, each one taking a chore off your desk. OnTrial goes with you to court.</p>
     <div class="app-grid">
-      <a class="app-card" href="/ontime/" style="--tint:var(--tint-teal);--c:var(--teal)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTime" width="534" height="119" src="assets/logos/ontime.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>Records your working day and drafts your time entries.</p><span class="more">Learn more &rarr;</span></a>
-      <a class="app-card" href="/ontrac/" style="--tint:var(--tint-rust);--c:var(--rust)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTrac" width="487" height="122" src="assets/logos/ontrac.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>Tracks discovery, versions your drafts and keeps your matter folders in order.</p><span class="more">Learn more &rarr;</span></a>
-      <a class="app-card" href="/onfile/" style="--tint:var(--tint-silver);--c:var(--silver-ink)"><h3 class="logo-h"><span class="wordmark"><img alt="OnFile" width="449" height="124" src="assets/logos/onfile.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>Checks your filing and fills in the court&rsquo;s e-filing screens.</p><span class="more">Learn more &rarr;</span></a>
-      <a class="app-card" href="/ontrial/" style="--tint:var(--tint-wine);--c:var(--wine)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTrial" width="507" height="119" src="assets/logos/ontrial.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>The ultimate digital trial notebook, in one fillable PDF.</p><span class="more">Learn more &rarr;</span></a>
+      <a class="app-card" href="/ontime/" style="--tint:var(--tint-teal);--c:var(--teal)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTime" width="534" height="119" src="/assets/logos/ontime.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>Records your working day and drafts your time entries.</p><span class="more">Learn more &rarr;</span></a>
+      <a class="app-card" href="/ontrac/" style="--tint:var(--tint-rust);--c:var(--rust)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTrac" width="487" height="122" src="/assets/logos/ontrac.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>Tracks discovery, versions your drafts and keeps your matter folders in order.</p><span class="more">Learn more &rarr;</span></a>
+      <a class="app-card" href="/onfile/" style="--tint:var(--tint-silver);--c:var(--silver-ink)"><h3 class="logo-h"><span class="wordmark"><img alt="OnFile" width="449" height="124" src="/assets/logos/onfile.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>Checks your filing and fills in the court&rsquo;s e-filing screens.</p><span class="more">Learn more &rarr;</span></a>
+      <a class="app-card" href="/ontrial/" style="--tint:var(--tint-wine);--c:var(--wine)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTrial" width="507" height="119" src="/assets/logos/ontrial.png" style="height:44px"><sup aria-hidden="true">&trade;</sup></span></h3><p>The ultimate digital trial notebook, in one fillable PDF.</p><span class="more">Learn more &rarr;</span></a>
     </div>
-    <p class="also">Want all three apps? Get them together in the <a href="#suite">OnSide Suite</a>.</p>
+    <p class="also">Want all three apps? Get them together in the <a href="/order/#suite">OnSide Suite</a>.</p>
   </div>
 </section>
 
@@ -459,83 +456,6 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
   </div>
 </section>
 
-<section class="pricing" id="pricing" aria-labelledby="h-pricing">
-  <div class="wrap">
-    <div class="center">
-      <p class="eyebrow">Pricing</p>
-      <h2 class="big" id="h-pricing">Buy directly from us.</h2>
-      <p class="sub">Sold directly at onsidesoftware.com. Prices are in U.S. dollars.</p>
-    </div>
-    <div class="pgrid">
-      <div class="price" style="--c:var(--teal)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTime" width="534" height="119" src="assets/logos/ontime.png" style="height:36px"><sup aria-hidden="true">&trade;</sup></span></h3><p class="otag">Limited time offer</p><p class="amt">$99 a month<small>PER LAWYER, FIRST 12 MONTHS &middot; COMING DECEMBER 1, 2026</small></p><p class="pterms">Take advantage of this limited-time introductory offer. Sign up by February 28, 2027, and pay $99 a month per lawyer for your first 12 months. After that, $129 a month per lawyer, or $99 for firms with four or more lawyers. Each lawyer includes one staff member; each additional staff member is $49 a month.</p><p class="pfine">Introductory offer for subscribers who sign up by February 28, 2027. Staff seats are $49 a month throughout.</p><ul><li>Mac and Windows</li><li>Draft time entries, sent to Clio, MyCase or PracticePanther</li></ul><a class="btn btn-ghost btn-sm" href="mailto:info@onsidesoftware.com?subject=OnTime%20launch">Tell me at launch</a></div>
-      <div class="price" style="--c:var(--rust)"><h3 class="logo-h"><span class="wordmark"><img alt="OnTrac" width="487" height="122" src="assets/logos/ontrac.png" style="height:36px"><sup aria-hidden="true">&trade;</sup></span></h3><p class="amt">$59 a month<small>COMING DECEMBER 1, 2026</small></p><p class="pterms">$59 a month. Each additional lawyer $39. Staff use it free.</p><ul><li>Mac and Windows</li><li>Versions, folders and discovery tracking</li></ul><a class="btn btn-ghost btn-sm" href="mailto:info@onsidesoftware.com?subject=OnTrac%20launch">Tell me at launch</a></div>
-      <div class="price" style="--c:var(--silver)"><h3 class="logo-h"><span class="wordmark"><img alt="OnFile" width="449" height="124" src="assets/logos/onfile.png" style="height:36px"><sup aria-hidden="true">&trade;</sup></span></h3><p class="ltag">No subscription fee</p><p class="amt">$6 a filing<small>COMING DECEMBER 1, 2026</small></p><p class="pterms">No subscription. $6 a filing, itemized by case so you can bill it to your client. No charge if the clerk rejects a filing.</p><p class="otag">Limited time offer</p><p class="poffer">Take advantage of this limited-time introductory offer. For new OnFile customers who sign up by February 28, 2027: your first 10 filings in OnFile are free of charge. Use them within 30 days of sign-up. Court and provider fees still apply.</p><ul><li>Mac and Windows</li><li>AZTurboCourt, eFileAZ and CM/ECF</li></ul><a class="btn btn-ghost btn-sm" href="mailto:info@onsidesoftware.com?subject=OnFile%20launch">Tell me at launch</a></div>
-    </div>
-
-    <div class="suite" id="suite">
-      <div class="suite-text">
-        <p class="eyebrow">Bundle &middot; All three apps</p>
-        <h3>OnSide Suite</h3>
-        <p class="suite-tag">Draft it. File it. Bill it.</p>
-        <p>OnTrac keeps your drafts in order. OnFile gets them filed. OnTime makes sure you&rsquo;re paid for it. One purchase covers your workflow from first draft to final invoice, for less than buying the three apps separately.</p>
-      </div>
-      <div class="suite-buy">
-        <div class="suite-logos"><span class="wordmark"><img alt="OnTime" width="534" height="119" src="assets/logos/ontime.png" style="height:24px"><sup aria-hidden="true">&trade;</sup></span><span class="wordmark"><img alt="OnTrac" width="487" height="122" src="assets/logos/ontrac.png" style="height:24px"><sup aria-hidden="true">&trade;</sup></span><span class="wordmark"><img alt="OnFile" width="449" height="124" src="assets/logos/onfile.png" style="height:24px"><sup aria-hidden="true">&trade;</sup></span></div>
-        <p class="otag">Limited time offer</p><p class="amt">$159 a month<small>PER LAWYER &middot; COMING DECEMBER 1, 2026 &middot; MAC AND WINDOWS</small></p><p class="pterms">All three apps for $159 a month per lawyer. Firms with four or more lawyers: $129 a month per lawyer. OnFile filings $6 each, itemized by case. Each lawyer includes one staff member; each additional staff member is $49 a month. Take advantage of this limited-time introductory offer. Sign up by February 28, 2027, and pay $139 a month per lawyer for your first 12 months.</p><p class="pfine">After 12 months, $159 a month per lawyer, or $129 for firms with four or more lawyers. Firms with four or more lawyers pay $129 from the start.</p>
-        <a class="btn btn-primary btn-sm" href="mailto:info@onsidesoftware.com?subject=OnSide%20Suite%20launch">Tell me at launch</a>
-      </div>
-    </div>
-
-    <h3 class="ptitle"><span class="wordmark"><img alt="OnTrial" width="507" height="119" src="assets/logos/ontrial.png" style="height:40px"><sup aria-hidden="true">&trade;</sup></span><span>Notebook editions</span></h3>
-    <div class="pgrid two">
-      <div class="price" style="--c:var(--silver)">
-        <h3>Standard</h3>
-        <p class="amt">$99<small>ONE-TIME PURCHASE &middot; ONE LICENSE PER LAWYER</small></p>
-        <ul>
-          <li>The Federal Rules of Evidence and Civil Procedure, with a blank for your state&rsquo;s rule beside each</li>
-          <li>10 witnesses, 6 claims, 85 of your exhibits and 51 of the other side&rsquo;s, 5 trial days</li>
-          <li>Bookmarks, sticky notes, and a case name that fills every page</li>
-          <li>Dictate into any field instead of typing, on iPad, Mac or Windows</li>
-          <li>Pages locked, so the notebook stays in order</li>
-        </ul>
-        <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/4gM28l04tcMc2FacIg00000">Pre-order Standard</a>
-      </div>
-      <div class="price pro" style="--c:var(--wine)">
-        <h3>Professional</h3>
-        <p class="amt">$179<small>ONE-TIME PURCHASE &middot; INCLUDES THE HEARING NOTEBOOK AND ONE STATE</small></p>
-        <ul>
-          <li>Everything in Standard, with room for a bigger trial: 20 witnesses, 10 claims and 10 defenses, 170 of your exhibits and 102 of the other side&rsquo;s, 10 trial days</li>
-          <li>Your state&rsquo;s rules filled in, with notes where your state differs: Arizona, California, Colorado, Florida, Georgia, Illinois, Massachusetts, Nevada, New Jersey, New York, Ohio, Pennsylvania, Texas, Utah or Washington; more states can be added</li>
-          <li>Add your own pages; print any list</li>
-          <li>OnTrial Export: exhibit lists, witness list, deposition designations and a proof gap report in Word and Excel</li>
-          <li>Includes the OnTrial Hearing Notebook</li>
-        </ul>
-        <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/00waER8AZ6nO5Rm9w400001">Pre-order Professional</a>
-      </div>
-    </div>
-    <div class="pgrid two">
-      <div class="price" style="--c:var(--wine)">
-        <h3>Hearing Notebook</h3>
-        <p class="amt">$69<small>ONE-TIME PURCHASE &middot; SOLD ON ITS OWN</small></p>
-        <ul>
-          <li>For motions and evidentiary hearings: a Speaking Outline you argue from, with your preparation outline, sources, authorities, rebuttal and the record behind it</li>
-          <li>Included with the Professional edition</li>
-        </ul>
-        <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/14A6oB18xaE493ybEc00003">Pre-order the Hearing Notebook</a>
-      </div>
-      <div class="price" style="--c:var(--wine)">
-        <h3>Additional state</h3>
-        <p class="amt">$29 each<small>ONE-TIME PURCHASE &middot; PROFESSIONAL EDITION ONLY</small></p>
-        <ul>
-          <li>Another state&rsquo;s rules filled in beside the federal rules, from the states listed above</li>
-          <li>Professional already includes one state</li>
-        </ul>
-        <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/7sY8wJ4kJ13u5Rm6jS00002">Pre-order a state</a>
-      </div>
-    </div>
-    <p class="pnote">OnTrial is currently expected to be available December 1, 2026. A pre-order is charged when you place it, and we email your licensed copy, made out to the lawyer you name, as soon as it is ready. OnTrial runs in the free Adobe Acrobat Reader on Mac or Windows and in PDF Viewer by Nutrient on the iPad. One license per lawyer. All sales are final. See the <a href="/terms/">Terms of Service</a>. Verify a copy at <a href="/verify/">onsidesoftware.com/verify</a>. OnTrial is a reference and organizing tool, not legal advice; check every rule against current official sources.</p>
-  </div>
-</section>
 
 <section class="faq" id="faq" aria-labelledby="h-faq">
   <div class="wrap">
@@ -543,12 +463,11 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
       <p class="eyebrow">Questions</p>
       <h2 class="big" id="h-faq">Frequently asked questions</h2>
     </div>
-    <details><summary>When can I get OnTime, OnTrac and OnFile?</summary><p>All three are coming December 1, 2026, for Mac and Windows. To hear when they are ready, email <a href="mailto:info@onsidesoftware.com?subject=Tell%20me%20when%20OnSide%20launches">info@onsidesoftware.com</a>.</p></details>
     <details><summary>Do my documents leave my computer?</summary><p>Only when you send them somewhere. OnTrac runs on your computer, and your documents never leave it.<sup class="fn">1</sup> In the OnTrial Notebook, what you type stays on your device.<sup class="fn">1</sup> OnTime keeps your activity on your computer and sends time entries to Clio, MyCase or PracticePanther only after you approve them. OnFile sends your filing to the court&rsquo;s portal; the case list it shares with your firm is encrypted so that OnSide cannot read it.</p><p><sup class="fn">1</sup> If you turn on an optional Claude connector (OnTrial&rsquo;s is available now; OnTrac&rsquo;s is coming), what Claude reads goes to Anthropic under your own Claude account. Read Anthropic&rsquo;s terms of service for more information.</p></details>
     <details><summary>Does OnTime work with Clio, MyCase and PracticePanther?</summary><p>Yes. OnTime prepares draft time entries for your review and, once you approve them, sends them to your billing software. It connects to Clio directly, and to MyCase and PracticePanther through your firm&rsquo;s own Zapier account. For another billing program, OnTime gives you an export file.</p></details>
     <details><summary>Which courts does OnFile support?</summary><p>At launch, Arizona&rsquo;s state courts through AZTurboCourt and eFileAZ, and the U.S. District Court and Bankruptcy Court for the District of Arizona through CM/ECF. OnFile fills in the screens, attaches your exhibits, and stops for you to review and submit. It never pays a filing fee for you.</p></details>
-    <details><summary>Can I buy all three apps together?</summary><p>Yes. The <a href="#suite">OnSide Suite</a> includes OnTime, OnTrac and OnFile, for less than buying them separately: $159 a month per lawyer, or $129 per lawyer for firms with four or more lawyers, with OnFile filings $6 each, itemized by case. Sign up by February 28, 2027, and pay $139 a month per lawyer for your first 12 months.</p></details>
-    <details><summary>Can I order now?</summary><p>You can pre-order the OnTrial Notebooks now, above. A pre-order is charged when you place it, and your licensed copy is emailed as soon as OnTrial is ready, currently expected December 1, 2026. Sign-up for OnTime, OnTrac, OnFile and the OnSide Suite opens closer to launch; to hear when, email <a href="mailto:info@onsidesoftware.com?subject=Tell%20me%20when%20OnSide%20launches">info@onsidesoftware.com</a>.</p></details>
+    <details><summary>Can I buy all three apps together?</summary><p>Yes. The <a href="/order/#suite">OnSide Suite</a> includes OnTime, OnTrac and OnFile, for less than buying them separately. The price is on the <a href="/order/">order page</a>.</p></details>
+    <details><summary>Can I order now?</summary><p>You can pre-order the OnTrial Notebooks now, on the <a href="/order/">order page</a>. A pre-order is charged when you place it, and your licensed copy is emailed as soon as OnTrial is ready, currently expected December 1, 2026. Sign-up for OnTime, OnTrac, OnFile and the OnSide Suite opens closer to launch; to hear when, email <a href="mailto:info@onsidesoftware.com?subject=Tell%20me%20when%20OnSide%20launches">info@onsidesoftware.com</a>.</p></details>
     <details><summary>What do I need to use the OnTrial Notebook?</summary><p>OnTrial runs in the free Adobe Acrobat Reader on Mac or Windows and in PDF Viewer by Nutrient on the iPad. The <a href="/manual/">User Manual</a> walks through every page.</p></details>
     <details><summary>How is OnTrial licensed?</summary><p>One license per lawyer. All sales are final. The <a href="/terms/">Terms of Service</a> have the details, and you can <a href="/verify/">verify a copy</a> of an OnTrial Notebook.</p></details>
     <details><summary>Is OnSide a law firm?</summary><p>No. OnSide Software, Inc. is a software company. It is not a law firm and does not provide legal advice.</p></details>
@@ -588,7 +507,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
     <div class="fgrid">
       <div><p class="fname">OnSide Software</p><p style="margin:0">Software for the practice of law.<br>Phoenix, Arizona.</p></div>
       <div><h4>Products</h4><ul><li><a href="/ontime/">OnTime</a></li><li><a href="/ontrac/">OnTrac</a></li><li><a href="/onfile/">OnFile</a></li><li><a href="/ontrial/">OnTrial Notebook</a></li></ul></div>
-      <div><h4>Resources</h4><ul><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li><li><a href="/news/">Launch News</a></li><li><a href="/manual/">OnTrial User Manual</a></li><li><a href="/verify/">Verify a copy</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/order/">Order</a></li><li><a href="#faq">FAQ</a></li><li><a href="/news/">Launch News</a></li><li><a href="/manual/">OnTrial User Manual</a></li><li><a href="/verify/">Verify a copy</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="#contact">Contact</a></li><li><a href="mailto:support@onsidesoftware.com">Support</a></li><li><a href="/terms/">Terms</a></li><li><a href="/privacy/">Privacy</a></li></ul></div>
     </div>
     <p class="fine">&copy; 2026 OnSide Software, Inc. All rights reserved. OnSide, OnTime, OnTrac, OnFile and OnTrial are trademarks of OnSide Software, Inc. Clio, MyCase and PracticePanther are trademarks of their owners. App windows on this page are illustrations with fictional names.</p>
