@@ -1,0 +1,172 @@
+/* ---------- tokens ---------- */
+.prod.quiet { --ground: #ffffff; --ground2: #f5f6f8; --sheet: #ffffff; --sheet-fg: #0b0f14; --sheet-muted: #3d4552; --line: #dcdfe5; --soft: #3d4552;
+  --glow: transparent; --lift: none; --pad: 60px; --r: 6px;
+  --t-title: clamp(2.5rem, 5vw, 3.625rem); --t-head: 2.25rem; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .prod.quiet { --ground: #0f1419; --ground2: #141b22; --sheet: #18212a; --sheet-fg: #f2f5f8; --sheet-muted: #b9c4cd; --line: rgba(255,255,255,.14); --soft: #b9c4cd; --lift: none; }
+}
+:root[data-theme="dark"] .prod.quiet { --ground: #0f1419; --ground2: #141b22; --sheet: #18212a; --sheet-fg: #f2f5f8; --sheet-muted: #b9c4cd; --line: rgba(255,255,255,.14); --soft: #b9c4cd; --lift: none; }
+@media (max-width: 960px) { .prod.quiet { --t-head: 2rem; } }
+@media (max-width: 640px) { .prod.quiet { --pad: 40px; --t-head: 1.75rem; } }
+.prod.quiet .pp-hero, .prod.quiet .pp-closer, .prod.quiet .pp-seal, .prod.quiet .pp-cmp .us { --tm: var(--c-ink); }
+
+/* ---------- buttons: plain rectangles ---------- */
+.quiet .btn, .quiet-page .top .btn { border-radius: var(--r, 6px); box-shadow: none; }
+.quiet .btn:hover, .quiet-page .top .btn:hover { transform: none; }
+.quiet .pp-btn, .quiet .pp-btn-c { background: var(--c); color: #fff; box-shadow: none; padding: 15px 24px; }
+
+/* ---------- the opening ---------- */
+.quiet .pp-open { background: #ffffff; padding-block: 44px 46px; }
+.quiet .pp-open-mark::after { height: 5px; }
+.quiet .pp-ribbon { height: 4px; }
+
+/* ---------- 1. the numbers: three figures in a ruled row, in ink ---------- */
+.quiet .pp-hero { background: var(--ground2); color: var(--fg); color-scheme: inherit; border-bottom: 1px solid var(--line); }
+.quiet .pp-hero h2 { color: var(--fg); }
+.quiet .pp-lead { container-type: normal; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.55fr); padding-block: var(--pad); }
+.quiet .pp-lead h2 { grid-column: 1 / -1; margin-bottom: 30px; }
+.quiet .pp-steps { display: contents; }
+.quiet .pp-pins, .quiet .pp-arrow, .quiet .pp-turn, .quiet .pp-day { display: none; }
+.quiet .pp-step, .quiet .pp-sum { display: block; margin: 0; padding: 20px 28px 2px; border-top: 2px solid var(--c); border-left: 1px solid var(--line); }
+.quiet .pp-s1 { padding-left: 0; border-left: 0; }
+.quiet .pp-step b, .quiet .pp-sum b { display: block; margin: 0; font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; white-space: nowrap; color: var(--c-ink); }
+.quiet .pp-s1 b { font-size: 2.5rem; }
+.quiet .pp-s2 b { font-size: 2.875rem; }
+.quiet .pp-sum b { font-size: 3.375rem; }
+.quiet .pp-sum b span { display: inline; }
+.quiet .pp-step > span:last-child, .quiet .pp-sum-l { display: block; margin-top: 10px; padding: 0; font-size: var(--t-body); line-height: 1.4; color: var(--muted); white-space: normal; text-wrap: pretty; }
+@media (max-width: 960px) {
+  .quiet .pp-lead { grid-template-columns: 1fr; row-gap: 22px; }
+  .quiet .pp-lead h2 { margin-bottom: 6px; }
+  .quiet .pp-step, .quiet .pp-sum { padding: 16px 0 0; border-left: 0; }
+  .quiet .pp-s1, .quiet .pp-s2 { flex: none; }
+}
+@media (max-width: 640px) {
+  .quiet .pp-s1 b { font-size: 2.125rem; } .quiet .pp-s2 b { font-size: 2.375rem; } .quiet .pp-sum b { font-size: 2.625rem; }
+}
+
+/* ---------- 2. how it works: a ruled sheet, small numerals, a thin flag over each step ---------- */
+.quiet .pp-flow { border: 1px solid var(--line); border-radius: var(--r); box-shadow: none; }
+.quiet .pp-flow li { border-top-width: 3px; padding: 22px 24px 26px; }
+.quiet .pp-flow li::before { margin-bottom: 14px; font-size: 1.625rem; color: var(--sheet-fg); }
+.quiet .pp-flow li + li::after { content: none; }
+@media (max-width: 960px) {
+  .quiet .pp-flow li { border-left-width: 3px; padding: 16px 18px 18px 16px; grid-template-columns: 1.6rem minmax(0, 1fr); }
+  .quiet .pp-flow li::before { margin: 1px 0 0; font-size: 1.5rem; text-align: left; }
+}
+
+/* ---------- 3. the three "No" lines: one flat ink band, small plain pictograms, the sentence beside a rule ---------- */
+.quiet .pp-vow { background: #2b3240; }
+.quiet .pp-vow h2 { gap: 8px; }
+.quiet .pp-vow h2 svg { width: 1.05em; height: 1.05em; border-radius: 0; background: none; box-shadow: none; }
+.quiet .pp-vow-c { background: none; border-radius: 0; box-shadow: none; padding: 6px 0 6px 30px; border-left: 2px solid rgba(255,255,255,.3); }
+.quiet .pp-vow-c .pp-kicker { color: #c9d0dc; }
+.quiet .pp-vow-l { color: #eef1f5; }
+@media (max-width: 1100px) { .quiet .pp-vow-c { padding: 0; border-left: 0; } }
+
+/* ---------- 4. the comparison: a ruled table; the product's column tinted, plain checks and crosses ---------- */
+.quiet .pp-cmp-w { border: 1px solid var(--line); border-radius: var(--r); box-shadow: none; }
+.quiet .pp-cmp .us { color: var(--sheet-fg); background: color-mix(in srgb, var(--c) 7%, var(--sheet)); }
+.quiet .pp-cmp thead th { padding-top: 22px; padding-bottom: 18px; border-top: 3px solid transparent; font-size: var(--t-body); font-weight: 600; }
+.quiet .pp-cmp thead th.us { border-top-color: var(--c); background: color-mix(in srgb, var(--c) 7%, var(--sheet)); color: var(--c-ink); font-size: 1.75rem; padding-left: 28px; }
+.quiet .pp-cmp tbody th.us { border-top: 1px solid var(--line); padding: 18px 24px 20px 66px; }
+.quiet .pp-cmp tbody th.us::before { left: 26px; top: 17px; width: 26px; height: 26px; background: none; color: var(--c-ink); box-shadow: none; font-size: 1.2rem; }
+.quiet .pp-cmp tbody th.us span { color: var(--sheet-muted); }
+.quiet .pp-cmp .mk { width: auto; height: auto; padding: 0; border: 0; border-radius: 0; background: none; font-size: 1.2rem; }
+.quiet .pp-cmp .mk.y { color: var(--c-ink); }
+.quiet .pp-cmp .mk.n { color: var(--sheet-muted); font-size: 1rem; opacity: .75; }
+.quiet .pp-cmp .mk.p { color: var(--sheet-muted); font-size: .9375rem; font-weight: 500; }
+@media (max-width: 640px) {
+  .quiet .pp-cmp thead th { font-size: .62rem; }
+  .quiet .pp-cmp thead th.us { font-size: 1.375rem; padding-left: 12px; }
+  .quiet .pp-cmp tbody th.us { padding: 13px 8px 15px 36px; }
+  .quiet .pp-cmp tbody th.us::before { left: 10px; top: 12px; width: 20px; height: 20px; font-size: 1rem; }
+  .quiet .pp-cmp .mk { font-size: 1rem; } .quiet .pp-cmp .mk.n { font-size: .85rem; } .quiet .pp-cmp .mk.p { font-size: .62rem; }
+}
+
+/* ---------- 5. the tour: a plain frame, flat cards ---------- */
+.quiet .pp-tour { background: var(--ground2); border-block: 1px solid var(--line); }
+.quiet .pp-video { padding-bottom: 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--sheet); box-shadow: none; }
+.quiet .pp-video .win { border: 1px solid #d5d9e0; box-shadow: 0 1px 3px rgba(16,24,40,.08); }
+.quiet .pp-scrub { display: none; }
+.quiet .pp-note { border: 1px solid var(--line); border-radius: var(--r); box-shadow: none; }
+.quiet .pp-note-s1 { background: color-mix(in srgb, var(--c) 9%, var(--sheet)); }
+.quiet .pp-note-s2 { background: var(--ground2); }
+.quiet .pp-phone { box-shadow: none; }
+.quiet .pp-claude { border-radius: 4px; }
+@media (max-width: 640px) { .quiet .pp-video { padding: 14px 0; } }
+
+/* the phone app and the plugin side by side, ahead of the video, which then runs the full width (founder, 2026-11-10) */
+.pp-tour.wide .wrap { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+.pp-tour.wide .pp-extras { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; gap: 24px; }
+.pp-tour.wide h2 { margin-top: 46px; margin-bottom: 26px; }
+.pp-tour.wide .pp-video { flex: none; }
+.pp-tour.wide .pp-vwin { width: 74%; font-size: 18px; }
+.pp-tour.wide .pp-vwin .win-bar { padding: 14px 20px; }
+.pp-tour.wide .pp-vwin .win-body { padding: 16px 26px 16px; }
+.pp-tour.wide .pp-vwin .row { padding: 11px 0; }
+.pp-tour.wide .pp-vwin .win-foot { margin-top: 8px; padding-top: 13px; }
+@media (max-width: 1100px) { .pp-tour.wide .pp-vwin { width: 78%; font-size: 15px; } .pp-tour.wide .pp-vwin .win-body { padding: 12px 20px; } .pp-tour.wide .pp-vwin .row { padding: 8px 0; } }
+@media (max-width: 960px) { .pp-tour.wide .pp-vwin { font-size: 13.5px; } .pp-tour.wide .pp-vwin .win-bar { padding: 10px 14px; } }
+@media (max-width: 640px) {
+  .pp-tour.wide .pp-extras { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .pp-tour.wide h2 { margin-top: 32px; margin-bottom: 18px; }
+  .pp-tour.wide .pp-vwin { width: 92%; font-size: 11.5px; }
+  .pp-tour.wide .pp-vwin .win-bar { padding: 8px 11px; }
+  .pp-tour.wide .pp-vwin .win-body { padding: 8px 12px 9px; }
+  .pp-tour.wide .pp-vwin .row { padding: 5px 0; }
+  .pp-tour.wide .pp-vwin .win-foot { margin-top: 5px; padding-top: 7px; }
+}
+
+/* ---------- 6. the price: a ruled note and two flat cards ---------- */
+.quiet .pp-seal { grid-template-columns: 1fr; padding: 14px 22px 15px; border: 1px solid var(--line); border-left: 3px solid var(--c); border-radius: var(--r); background: var(--sheet); color: var(--sheet-muted); box-shadow: none; }
+.quiet .pp-seal svg { display: none; }
+.quiet .pp-seal strong { color: var(--sheet-fg); }
+.quiet .pp-card { border: 1px solid var(--line); border-radius: var(--r); box-shadow: none; }
+.quiet .pp-card::before { height: 3px; }
+.quiet .pp-tag { top: 26px; right: 26px; padding: 5px 9px 4px; border: 1px solid currentColor; border-radius: 3px; background: none; color: var(--c-ink); letter-spacing: .1em; }
+.quiet .pp-amt b { font-size: 3rem; }
+.quiet .pp-card > .btn { margin-top: 3px; padding: 13px 22px; }
+.quiet .pp-suite { border-color: #2b3240; }
+.quiet .pp-suite .pp-tag { background: none; color: #ffffff; box-shadow: none; }
+.quiet .pp-suite .btn { background: #ffffff; color: #2b3240; }
+.quiet .pp-offer { border-radius: var(--r); }
+.quiet .pp-slim > div { border: 1px solid var(--line); border-radius: var(--r); box-shadow: none; }
+@media (max-width: 640px) { .quiet .pp-tag { top: 16px; right: 16px; } .quiet .pp-amt b { font-size: 2.75rem; } .quiet .pp-card > .btn { margin-top: 14px; padding: 15px 22px; } }
+
+/* ---------- 7. the closer: a plain band, the headline in ink ---------- */
+.quiet .pp-closer { background: var(--ground2); color: var(--fg); color-scheme: inherit; border-top: 1px solid var(--line); padding-block: 52px; }
+.quiet .pp-closer h2 { color: var(--fg); }
+.quiet .pp-watch { display: none; }
+
+/* ---------- the other pages' lead bands ---------- */
+.quiet .pp-lead-b { padding-block: var(--pad); }
+.quiet .pp-lead-l { color: var(--fg); }
+.quiet .pp-strip { display: none; }
+.quiet .pp-qa b { color: var(--fg); }
+.quiet .pp-qa svg { color: var(--muted); }
+.quiet .pp-qa span { border: 1px solid var(--line); border-left: 3px solid var(--c); border-radius: var(--r); background: var(--sheet); color: var(--c-ink); box-shadow: none; font-size: var(--t-body); }
+.quiet .pp-screens li { border: 1px solid var(--line); border-radius: var(--r); background: var(--sheet); color: var(--fg); font-weight: 400; }
+.quiet .pp-screens li::before { width: auto; height: auto; background: none; color: var(--c-ink); font-size: 1.05rem; }
+.quiet .pp-screens li.go { border-color: var(--c); background: var(--c); color: #fff; font-family: var(--body); font-weight: 500; box-shadow: none; }
+.quiet .pp-screens li.go::before { background: none; color: #fff; }
+.quiet .pp-note-ic { color: var(--c-ink); }
+
+/* ---------- the "Every feature" pages ---------- */
+.quiet .pf-band { padding-block: 20px; }
+.quiet .pf-jump a { border: 1px solid var(--line); border-radius: var(--r); background: var(--sheet); color: var(--fg); font-weight: 400; }
+.quiet .pf-jump a:hover { background: var(--sheet); border-color: var(--c); }
+.quiet .pf-jump a:focus-visible { outline-color: var(--c); }
+.quiet .pf-jump a span { border-radius: 3px; background: color-mix(in srgb, var(--c) 12%, var(--sheet)); color: var(--c-ink); }
+.quiet .pf-items li::before { background: none; color: var(--c-ink); font-size: 1.15rem; }
+
+/* ---------- the "Every feature" pages and other shared pieces, should this design be taken up ---------- */
+.quiet .pf-sheet { border: 1px solid var(--line); border-top: 3px solid var(--c); border-radius: var(--r); box-shadow: none; }
+.quiet .pp-shot { border-width: 1px; border-color: var(--line); border-radius: var(--r); box-shadow: none; }
+
+/* the help button and panel, as on the rest of the site */
+.quiet-page .hp-open { border-radius: 6px; box-shadow: none; }
+.quiet-page .hp-panel { border-radius: 8px; box-shadow: 0 1px 3px rgba(16,24,40,.12), 0 0 0 1px #d5d9e0; }
+
+/* "Order Now" under the opening sentence of each product page */
+.quiet .pp-open-cta { margin: 26px 0 0; }
