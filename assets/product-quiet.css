@@ -178,3 +178,8 @@
 
 /* "Order Now" under the opening sentence of each product page */
 .quiet .pp-open-cta { margin: 26px 0 0; }
+
+/* "Mac and Windows" to the right of "Order Now" on OnTime, OnTrac and OnFile (founder, 2026-11-12). The opening stays
+   white in dark mode, so the words keep one ink. They drop under the button when the line is too narrow for both. */
+.quiet .pp-open-cta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; }
+.quiet .pp-open-os { font-size: 1rem; font-weight: 500; color: #3d4552; }
