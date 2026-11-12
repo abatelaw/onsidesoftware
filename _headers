@@ -11,6 +11,11 @@
 /.well-known/apple-app-site-association
   Content-Type: application/json
 
+# The OnTime phone app's App Link (Android). The fingerprint today is the development (debug) key only; add the
+# Play signing key's fingerprint before release.
+/.well-known/assetlinks.json
+  Content-Type: application/json
+
 # The pairing page shows only when the phone app is not installed; keep it out of search and caches.
 /ontime/pair/*
   X-Robots-Tag: noindex

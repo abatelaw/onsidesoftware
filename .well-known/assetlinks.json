@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.onsidesoftware.ontime.phone",
+      "sha256_cert_fingerprints": [
+        "78:37:41:69:B5:A3:40:75:83:3C:22:19:EE:0A:0B:98:5C:71:F5:FF:A0:60:A8:51:76:3B:8A:43:D5:24:83:E2"
+      ]
+    }
+  }
+]
