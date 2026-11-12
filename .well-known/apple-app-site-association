@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["6AF7ZFGSRF.com.onsidesoftware.ontime.phone"],
+        "components": [
+          { "/": "/ontime/pair/*", "comment": "OnTime phone pairing link; its fields follow # and never reach the server" },
+          { "/": "/ontime/pair", "comment": "The same, without the trailing slash" }
+        ]
+      }
+    ]
+  }
+}

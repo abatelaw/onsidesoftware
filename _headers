@@ -5,3 +5,13 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# The OnTime phone app's universal link (iPhone). Apple fetches this file through its own servers and needs it as JSON,
+# with no redirect: it must be served from www.onsidesoftware.com, the host in the pairing link.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+
+# The pairing page shows only when the phone app is not installed; keep it out of search and caches.
+/ontime/pair/*
+  X-Robots-Tag: noindex
+  Cache-Control: no-store
