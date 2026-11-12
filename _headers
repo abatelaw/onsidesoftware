@@ -28,3 +28,10 @@
   Cache-Control: no-store
   X-Robots-Tag: noindex, nofollow
   Content-Security-Policy: default-src 'none'; script-src 'sha256-tN/gYHXGmaQuqfGJOMQlUuyo7dlrukhjOKW5lcZtEk8='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+
+# OnTime's Clio sign-in return page: the same rules as the PracticePanther page above.
+/ontime/clio/callback/
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-eOWIVQIt197AXnBYAed7WKLuKxMkKk8SCrwt0FAzSCw='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'

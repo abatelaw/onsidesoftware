@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>OnTime sign-in</title>
+<style>body{font-family:-apple-system,system-ui,sans-serif;margin:3rem 1rem;color:#1a1a1a;background:#fff;text-align:center}</style>
+</head>
+<body>
+<!-- Clio returns here after sign-in. This page sends the browser straight on to OnTime on the same computer,
+     with the same code and state. It keeps nothing, loads nothing and sends nothing anywhere else. -->
+<p id="msg">Returning to OnTime on this computer…</p>
+<script>(function () {
+  var q = new URLSearchParams(window.location.search);
+  var out = new URLSearchParams();
+  ["code", "state", "error", "error_description"].forEach(function (k) {
+    var v = q.get(k);
+    if (v !== null) out.set(k, v);
+  });
+  if (!out.has("state") || (!out.has("code") && !out.has("error"))) {
+    document.getElementById("msg").textContent =
+      "This page finishes signing OnTime in to Clio. Start from OnTime on your computer.";
+    return;
+  }
+  window.location.replace("http://127.0.0.1:47818/oauth/clio/callback?" + out.toString());
+})();</script>
+</body>
+</html>
