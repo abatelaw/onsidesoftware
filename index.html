@@ -313,6 +313,8 @@ sup.fn { font-size: .7em; line-height: 0; vertical-align: super; }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; border-radius: 4px; }
 .faq details p { margin: 0 0 22px; color: var(--muted); max-width: 44rem; }
+.faq details ul { margin: -12px 0 22px; padding-left: 1.2rem; color: var(--muted); max-width: 44rem; }
+.faq details ul + p { margin-top: 0; }
 
 /* Closing call to action */
 .closer { background: radial-gradient(900px 360px at 50% 0, #f6f8fb 0, transparent 70%), #e8ecf2; color: #0b0f14; color-scheme: light; --muted: #3d4552; --fg: #0b0f14; padding-block: 88px; border-top: 1px solid var(--rule); }
@@ -467,6 +469,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
     <details><summary>Which courts does OnFile support?</summary><p>At launch, Arizona&rsquo;s state courts through AZTurboCourt and eFileAZ, and the U.S. District Court and Bankruptcy Court for the District of Arizona through CM/ECF. OnFile fills in the screens, attaches your exhibits, and stops for you to review and submit. It never pays a filing fee for you.</p></details>
     <details><summary>Can I buy all three apps together?</summary><p>Yes. The OnSide Suite includes OnTime, OnTrac and OnFile, for less than buying them separately.</p></details>
     <details><summary>Can I order now?</summary><p>You can pre-order the OnTrial Notebooks now, on the <a href="/order/">order page</a>. A pre-order is charged when you place it, and your licensed copy is emailed as soon as OnTrial is ready, currently expected December 1, 2026. Sign-up for OnTime, OnTrac, OnFile and the OnSide Suite opens closer to launch; to hear when, email <a href="mailto:info@onsidesoftware.com?subject=Tell%20me%20when%20OnSide%20launches">info@onsidesoftware.com</a>.</p></details>
+    <details><summary>What do I need to run OnTrac?</summary><p><strong>On a Mac:</strong></p><ul><li>macOS 14 Sonoma or later, on a Mac with Apple silicon or an Intel processor</li><li>Microsoft Word and Excel for Mac, from Microsoft 365 (not Word and Excel for the web)</li><li>An administrator&rsquo;s password to install</li><li>Full Disk Access for OnTrac, turned on once in System Settings</li></ul><p><strong>On Windows:</strong></p><ul><li>Windows 11 or Windows 10, 64-bit, on an Intel or AMD (x64) or an ARM64 processor</li><li>The Microsoft Word and Excel desktop apps for Windows, from Microsoft 365 (not Word and Excel for the web)</li><li>Microsoft Edge WebView2: part of Windows 11; on Windows 10 the installer downloads it if it is missing</li><li>Installs for your own Windows account, with no administrator</li></ul></details>
     <details><summary>What do I need to use the OnTrial Notebook?</summary><p>OnTrial runs in the free Adobe Acrobat Reader on Mac or Windows and in PDF Viewer by Nutrient on the iPad. The <a href="/manual/">User Manual</a> walks through every page.</p></details>
     <details><summary>How is OnTrial licensed?</summary><p>One license per lawyer. All sales are final. The <a href="/terms/">Terms of Service</a> have the details, and you can <a href="/verify/">verify a copy</a> of an OnTrial Notebook.</p></details>
     <details><summary>Is OnSide a law firm?</summary><p>No. OnSide Software, Inc. is a software company. It is not a law firm and does not provide legal advice.</p></details>
@@ -509,7 +512,7 @@ footer .fname { font-family: var(--display); font-weight: 700; font-size: 1.3rem
       <div><h4>Resources</h4><ul><li><a href="/order/">Order</a></li><li><a href="#faq">FAQ</a></li><li><a href="/news/">Launch News</a></li><li><a href="/manual/">OnTrial User Manual</a></li><li><a href="/verify/">Verify a copy</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="#contact">Contact</a></li><li><a href="mailto:support@onsidesoftware.com">Support</a></li><li><a href="/terms/">Terms</a></li><li><a href="/privacy/">Privacy</a></li></ul></div>
     </div>
-    <p class="fine">&copy; 2026 OnSide Software, Inc. All rights reserved. OnSide, OnTime, OnTrac, OnFile and OnTrial are trademarks of OnSide Software, Inc. Clio, MyCase and PracticePanther are trademarks of their owners. App windows on this page are illustrations with fictional names.</p>
+    <p class="fine">&copy; 2026 OnSide Software, Inc. All rights reserved. OnSide, OnTime, OnTrac, OnFile and OnTrial are trademarks of OnSide Software, Inc. Clio, MyCase, PracticePanther, Microsoft 365, Word, Excel, Windows, Mac, macOS, Intel and AMD are trademarks of their owners. App windows on this page are illustrations with fictional names.</p>
   </div>
 </footer>
 
