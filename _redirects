@@ -1,3 +1,6 @@
 # Cloudflare Pages redirects (onsidesoftware.com).
 # OnFile's sign-up link: /go/<channel> goes to OnSide's service, which sends the visitor to Stripe's card page.
 /go/* https://onfile-service.onsidesoftware.workers.dev/go/:splat 302
+# Partner referral link (Partner Program Agreement 1.2): /r/<code> opens the home page with the partner's code, which
+# /assets/ref.js carries to each Stripe checkout link as client_reference_id=partner-<code>.
+/r/:code /?ref=:code 302
