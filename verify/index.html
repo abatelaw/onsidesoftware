@@ -28,7 +28,7 @@
 </div></div>
 <div class="ribbon" aria-hidden="true"></div>
 <main><div class="inner doc">
-<p>Enter the serial number and the Licensee name exactly as they appear in the footer of the notebook's pages (for example <span style="font-family:var(--mono)">No. OT-ABCD2345</span>). The page answers only whether they match a license we issued. Nothing you enter is sent anywhere: the check runs in your browser.</p>
+<p>Enter the serial number and the Licensee name exactly as they appear in the footer of the notebook's pages (for example <span style="font-family:var(--mono)">No. OT-ABCD2345</span>). The page answers only whether they match a license we issued and whether that license is still in effect. What you enter never leaves your browser: it is turned into a one-way code there, and only that code is sent to our server, which answers and keeps nothing.</p>
 <form class="verify" id="vf" autocomplete="off">
   <label>Serial number<input id="serial" name="serial" required placeholder="OT-ABCD2345" spellcheck="false"></label>
   <label>Licensee name<input id="licensee" name="licensee" required placeholder="As printed in the footer" spellcheck="false"></label>
@@ -41,26 +41,27 @@
 <script>
 (function () {
   "use strict";
-  var list = null;
   function norm(s) { return String(s || "").normalize("NFC").trim().replace(/\s+/g, " ").toLowerCase(); }
   function hex(buf) { return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ("0" + b.toString(16)).slice(-2); }).join(""); }
   function fp(serial, name) {
     var s = String(serial || "").trim().toUpperCase().replace(/^NO\.?\s*/, "");
     return crypto.subtle.digest("SHA-256", new TextEncoder().encode("ontrial-license|" + s + "|" + norm(name))).then(hex);
   }
-  function show(ok, text) {
+  function show(ok, head, text) {
     var r = document.getElementById("result");
     r.hidden = false; r.className = "result " + (ok ? "ok" : "bad");
-    r.innerHTML = "<strong>" + (ok ? "Genuine." : "Not found.") + "</strong> " + text;
+    r.innerHTML = "<strong>" + head + "</strong> " + text;
   }
   document.getElementById("vf").addEventListener("submit", function (e) {
     e.preventDefault();
     var serial = document.getElementById("serial").value, name = document.getElementById("licensee").value;
-    var load = list ? Promise.resolve(list) : fetch("licenses.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { list = new Set(j.fingerprints || []); return list; });
-    Promise.all([load, fp(serial, name)]).then(function (res) {
-      if (res[0].has(res[1])) show(true, "This serial number and name match a license issued by OnSide Software.");
-      else show(false, "This serial number and name do not match a license we issued. Check the spelling against the page footer; if it still does not match, please contact us.");
-    }).catch(function () { show(false, "The check could not run in this browser. Please try again, or contact us."); });
+    fp(serial, name).then(function (code) {
+      return fetch("https://ontrial.onsidesoftware.com/v1/verify/" + code, { cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer" });
+    }).then(function (r) { if (!r.ok) throw new Error(); return r.json(); }).then(function (j) {
+      if (j.result === "genuine") show(true, "Genuine.", "This serial number and name match a license issued by OnSide Software.");
+      else if (j.result === "revoked") show(false, "No longer licensed.", "This serial number and name match a license OnSide Software issued, but that license has ended. Section 13.3 of the Terms says what may still be done with its copies. If you have a question, please contact us.");
+      else show(false, "Not found.", "This serial number and name do not match a license we issued. Check the spelling against the page footer; if it still does not match, please contact us.");
+    }).catch(function () { show(false, "Not checked.", "The check could not reach our server. Please try again, or contact us."); });
   });
 })();
 </script>
