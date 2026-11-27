@@ -29,7 +29,10 @@
 .al-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 8px; background: linear-gradient(180deg, #2f5d43 0 33.33%, #d9d4cb 33.33% 66.66%, var(--c) 66.66% 100%); }
 .al-name { display: flex; align-items: center; gap: 18px; margin: 0 0 14px; }
 .al-name .icon { width: 72px; height: 72px; border-radius: 17px; flex: none; }
-.al-soon { --c: #9669b8; grid-template-columns: minmax(0, 1fr); }
+.al-soon { --c: #9669b8; grid-template-columns: minmax(0, 1fr) 320px; }
+.al-wide { margin: 0; }
+.al-wide img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 14px 30px -14px rgba(16,24,40,.35); }
+.al-wide figcaption { margin-top: 8px; font-size: .85rem; color: #56616b; text-align: center; }
 .al-soon::before { background: var(--c); }
 .al-tag { display: inline-block; vertical-align: middle; margin-left: 10px; padding: 4px 10px; border-radius: 999px; background: #efe7f6; color: #5b3a80; font-family: var(--body); font-size: .8rem; font-weight: 600; letter-spacing: .02em; }
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -38,7 +41,7 @@
 .al-card p.l { margin: 0 0 16px; color: #3d4552; }
 .al-card .btn { background: var(--c); color: #fff; }
 .al-card .shot { width: 150px; border-radius: 18px; box-shadow: 0 14px 30px -14px rgba(16,24,40,.35); }
-@media (max-width: 760px) { .al-card { grid-template-columns: 1fr; padding: 24px 22px 24px 28px; } .al-card h2 { font-size: 1.35rem; } .al-name { gap: 14px; } .al-name .icon { width: 56px; height: 56px; border-radius: 13px; } .al-card .shot { display: none; } }
+@media (max-width: 760px) { .al-card { grid-template-columns: 1fr; padding: 24px 22px 24px 28px; } .al-card h2 { font-size: 1.35rem; } .al-name { gap: 14px; } .al-name .icon { width: 56px; height: 56px; border-radius: 13px; } .al-card .shot { display: none; } .al-soon { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body class="quiet-page">
@@ -88,6 +91,7 @@
         </div>
         <p class="l">Record your takes or bring in your clips, then say what you want: &ldquo;cut the stumbles,&rdquo; &ldquo;make it 30 seconds with captions.&rdquo; OnFilm builds the edit on your phone, every change can be undone, and your footage stays on your phone until you share it.</p>
       </div>
+      <figure class="al-wide"><img src="/assets/apps/onfilm/duo-edit-v2.jpg" alt="OnFilm on an unfolded iPhone Duo: the movie with captions on the left, the spoken lines with the false starts struck out on the right, and the cuts along the bottom." width="720" height="485" loading="lazy"><figcaption>On iPhone Duo, unfolded</figcaption></figure>
     </article>
   </div>
 </section>
