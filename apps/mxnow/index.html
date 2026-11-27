@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MXNOW: Speak Mexican Spanish NOW! | OnSide Software</title>
+<link rel="canonical" href="https://www.onsidesoftware.com/apps/mxnow/">
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png?v=2">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OnSide Software">
+<meta property="og:url" content="https://www.onsidesoftware.com/apps/mxnow/">
+<meta property="og:title" content="MXNOW: Speak Mexican Spanish NOW!">
+<meta property="og:description" content="Practice spoken Mexican Spanish with an AI conversation partner and the real voices of native speakers. For iPhone and Android.">
+<meta property="og:image" content="https://www.onsidesoftware.com/assets/share/onside-share.png">
+<meta name="description" content="Practice spoken Mexican Spanish with an AI conversation partner and the real voices of native speakers. For iPhone and Android.">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/product-base.css?v=d0f34e413c">
+<link rel="stylesheet" href="/assets/product.css?v=42d090c209">
+<link rel="stylesheet" href="/assets/product-quiet.css?v=d9ac72174e">
+<style>
+/* MXNOW's colors, from the app (Theme.swift): red A02530, forest 2F5D43, marigold A85F00. Used sparingly. */
+.prod.prod-mxnow { --c: #a02530; --c-ink: #7d1c25; --c-deep: #5e141b; --ground: #f8ecec; --ground2: #f1dcdd; --line: rgba(160,37,48,.2); --soft: #f7e4e5; --c-light: #e8a1a7; --mx-green: #2f5d43; --mx-gold: #a85f00; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prod.prod-mxnow { --ground: #1b0e0f; --ground2: #251315; --sheet: #34191c; --sheet-fg: #f6f1f1; --sheet-muted: #d6c2c4; --c-ink: #e8a1a7; --line: rgba(255,255,255,.13); } }
+:root[data-theme="dark"] .prod.prod-mxnow { --ground: #1b0e0f; --ground2: #251315; --sheet: #34191c; --sheet-fg: #f6f1f1; --sheet-muted: #d6c2c4; --c-ink: #e8a1a7; --line: rgba(255,255,255,.13); }
+.prod-mxnow .pp-open-mark::after { background: linear-gradient(90deg, var(--mx-green) 0 33.33%, #d9d4cb 33.33% 66.66%, var(--c) 66.66% 100%); }
+.prod-mxnow .pp-open-mark img { height: 46px; width: auto; display: block; }
+/* "For iPhone and Android", bigger, said three times on the page (Nino, 2026-11-27). */
+.prod-mxnow .mx-os { font-family: var(--body); font-weight: 600; font-size: clamp(1.15rem, 1.8vw, 1.35rem); color: #0b0f14; letter-spacing: 0; }
+.prod-mxnow .mx-os-c { margin: 10px 0 0; }
+.prod-mxnow .pp-closer .mx-os { color: inherit; }
+.prod-mxnow .mx-best { margin: 0 0 14px; font-family: var(--display); font-weight: 700; font-size: clamp(1.25rem, 2.2vw, 1.6rem); line-height: 1.2; color: var(--c); }
+.prod-mxnow .pp-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.prod-mxnow .pp-flow li:nth-child(1) { --f: var(--mx-green); --n: var(--mx-green); }
+.prod-mxnow .pp-flow li:nth-child(2) { --f: var(--mx-gold); --n: var(--mx-gold); }
+.prod-mxnow .pp-flow li:nth-child(3) { --f: var(--c); --n: var(--c); }
+.mx-phones { padding-block: 8px 48px; }
+.mx-phones .wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; max-width: 60rem; }
+.mx-phones figure { margin: 0; }
+.mx-phones img { display: block; width: 100%; height: auto; border-radius: 26px; box-shadow: 0 1px 2px rgba(16,24,40,.08), 0 18px 40px -14px rgba(16,24,40,.3); }
+.mx-phones figcaption { margin-top: 12px; font-size: .95rem; color: var(--muted, #3d4552); text-align: center; }
+.mx-feat { padding-block: 56px 32px; }
+.mx-feat .wrap { max-width: 60rem; }
+.mx-feat-l { margin: 0 0 24px; font-size: 1.15rem; color: #3d4552; max-width: 44rem; }
+.mx-voices { margin: 0 0 28px; padding: 24px 28px; border-radius: 20px; background: #1a1a1a; color: #f2efe8; border-left: 10px solid var(--mx-green); }
+.mx-voices-t { margin: 0 0 8px; font-family: var(--display); font-weight: 700; font-size: clamp(1.3rem, 2.4vw, 1.7rem); color: #ffffff; }
+.mx-voices p:last-child { margin: 0; }
+.mx-tbl-w { overflow-x: auto; }
+.mx-tbl { width: 100%; border-collapse: collapse; font-size: 1rem; background: #fff; color: #0b0f14; border-radius: 16px; overflow: hidden; box-shadow: 0 0 0 1px rgba(73,82,100,.16); }
+.mx-tbl thead th { text-align: left; font-family: var(--body); font-weight: 600; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: #56616b; padding: 14px 20px; border-bottom: 1px solid #e3e7ec; }
+.mx-tbl tbody th[scope="row"] { text-align: left; vertical-align: top; width: 32%; padding: 14px 20px; font-weight: 600; border-top: 1px solid #eef0f3; }
+.mx-tbl td { padding: 14px 20px; color: #3d4552; border-top: 1px solid #eef0f3; }
+.mx-tbl tr.g th { text-align: left; padding: 18px 20px 8px; font-family: var(--display); font-size: 1.2rem; color: var(--c); border-top: 1px solid #e3e7ec; background: #faf7f3; }
+.prod-mxnow .pp-open-l .mx-not { display: block; font-weight: 600; margin-bottom: 6px; }
+.mx-pass { padding-block: 40px; }
+.mx-pass .card { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 40px; align-items: center; max-width: 60rem; margin-inline: auto; padding: 44px; border-radius: 28px; background: var(--ground); }
+/* Travel Pass, option B (Nino, 2026-11-27: "I like B"): white, green border, the flag along the top, red call-out. */
+.mx-pass .card { position: relative; overflow: hidden; background: #fff; color: #0b0f14; border: 3px solid var(--mx-green); padding-top: 58px; }
+.mx-pass .card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 14px; background: linear-gradient(90deg, var(--mx-green) 0 33.33%, #ffffff 33.33% 66.66%, var(--c) 66.66% 100%); border-bottom: 1px solid rgba(47,93,67,.25); }
+.mx-pass h2 { color: var(--mx-green); }
+.mx-pass h2 em { font-style: normal; color: var(--c); }
+.mx-pass h2 { margin: 0 0 12px; font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1.1; }
+.mx-pass p { margin: 0 0 10px; }
+.mx-pass img { width: 100%; max-width: 240px; justify-self: center; border-radius: 22px; box-shadow: 0 18px 40px -14px rgba(16,24,40,.3); }
+.mx-free { margin: 18px auto 0; max-width: 52rem; text-align: center; color: var(--muted, #3d4552); }
+.mx-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 26px 0 0; }
+.mx-links a { font-weight: 500; }
+@media (max-width: 760px) {
+  .mx-tbl tbody th[scope="row"] { width: 40%; }
+  .mx-tbl th, .mx-tbl td { padding-inline: 14px; }
+  .mx-phones .wrap { grid-template-columns: 1fr 1fr; }
+  .mx-phones figure:nth-child(3) { display: none; }
+  .prod-mxnow .pp-flow { grid-template-columns: 1fr; }
+  .mx-pass .card { grid-template-columns: 1fr; padding: 30px 22px; }
+}
+</style>
+</head>
+<body class="quiet-page">
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="OnSide Software home"><img alt="OnSide Software" width="1254" height="523" src="/logo.svg"><sup aria-hidden="true">&trade;</sup></a>
+    <nav aria-label="Site">
+      <a href="/ontime/">OnTime</a><a href="/ontrac/">OnTrac</a><a href="/onfile/">OnFile</a><a href="/ontrial/">OnTrial</a><a href="/apps/" aria-current="page">Phone apps</a><a href="/order/">Order Now</a><a href="/#faq">FAQ</a><a href="/news/">News</a><a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="prod prod-mxnow quiet">
+
+<section class="pp-open" aria-labelledby="h-open">
+  <div class="wrap">
+    <div>
+      <p class="pp-open-mark"><img alt="MXNOW" width="600" height="124" src="/assets/apps/mxnow-wordmark.png"></p>
+      <h1 id="h-open">Speak Mexican Spanish NOW!</h1>
+    </div>
+    <div class="pp-open-r">
+      <p class="mx-best">The best app for learning Mexican Spanish.</p>
+      <p class="pp-open-l"><b class="mx-not">Not just another AI conversation app.</b> MXNOW teaches the Spanish Mexicans actually speak, with real Mexican voices, conversations in the places you&rsquo;ll be, and the words, slang and grammar that go with them.</p>
+      <p class="pp-open-cta"><a class="btn pp-btn-c" href="#price">See the plans</a><span class="pp-open-os mx-os">For iPhone and Android</span></p>
+    </div>
+  </div>
+</section>
+<div class="ribbon pp-ribbon" aria-hidden="true"></div>
+
+<section class="mx-phones" aria-label="MXNOW on a phone">
+  <div class="wrap">
+    <figure><img src="/assets/apps/mxnow/home.jpg" width="540" height="1174" alt="MXNOW's home screen: conversations, listening and words, with the level and tú or usted chosen at the top." loading="lazy"><figcaption>Pick a scene and your level</figcaption></figure>
+    <figure><img src="/assets/apps/mxnow/conversation.jpg" width="540" height="1174" alt="A conversation in MXNOW: the partner answers in Spanish and suggests a more natural way to say the learner's line." loading="lazy"><figcaption>Talk, and hear how a Mexican would say it</figcaption></figure>
+    <figure><img src="/assets/apps/mxnow/listening.jpg" width="540" height="1174" alt="Oído mexicano: short stories recorded by native speakers from Mexico." loading="lazy"><figcaption>Train your ear on real voices</figcaption></figure>
+  </div>
+</section>
+
+
+
+<section class="mx-feat" id="features" aria-labelledby="h-feat">
+  <div class="wrap">
+    <h2 class="pp-h" id="h-feat">Not just another AI conversation app</h2>
+    <p class="mx-feat-l">The AI partner is one part of MXNOW. The rest is built around real Mexican Spanish, and real Mexicans.</p>
+    <div class="mx-voices">
+      <p class="mx-voices-t">Real Mexican voices.</p>
+      <p>Not just AI voices. O&iacute;do mexicano is recorded by three native speakers: Marta from Mexico City, Sof&iacute;a from Culiac&aacute;n and Miguel from Ciudad Ju&aacute;rez. You train your ear on how people in Mexico really sound, at real speed.</p>
+    </div>
+    <div class="mx-tbl-w">
+      <table class="mx-tbl">
+        <thead><tr><th scope="col">Feature</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr class="g"><th colspan="2" scope="colgroup">Speak</th></tr>
+          <tr><th scope="row">Conversation lessons</th><td>242 lessons in 24 everyday scenes, from the taquer&iacute;a to renting an apartment. Your partner stays in role and shows you what a Mexican would say, and why.</td></tr>
+          <tr><th scope="row">Pl&aacute;tica libre</th><td>Pick any topic and just talk, with no goals.</td></tr>
+          <tr><th scope="row">T&uacute; or usted, at your level</th><td>Casual t&uacute; with everyday slang, or polite usted. Beginner, intermediate or advanced: you choose.</td></tr>
+          <tr><th scope="row">&Eacute;chale ganas</th><td>Your own mistakes come back as quick speaking drills.</td></tr>
+          <tr class="g"><th colspan="2" scope="colgroup">Listen</th></tr>
+          <tr><th scope="row">O&iacute;do mexicano</th><td>Real recordings of three native Mexican speakers: phrases, short real-life moments and longer stories, slow, normal or at real speed.</td></tr>
+          <tr><th scope="row">&iquest;Qu&eacute; o&iacute;ste?</th><td>Hear a sentence and pick what you caught from phrases that sound alike, until your ear knows the difference.</td></tr>
+          <tr class="g"><th colspan="2" scope="colgroup">Learn the words</th></tr>
+          <tr><th scope="row">Ya me la s&eacute;</th><td>1,000 everyday words, 500 verbs and 500 others, each with an example, most-used first.</td></tr>
+          <tr><th scope="row">Modismos</th><td>41 Mexican expressions, from &iquest;Mande? to ya merito, with notes on when each is safe to use.</td></tr>
+          <tr><th scope="row">Lo esencial and Gram&aacute;tica</th><td>27 core verbs and phrases with their everyday meanings, and 13 short grammar rules with Mexican examples.</td></tr>
+          <tr><th scope="row">N&uacute;meros, precios y horas</th><td>Prices, times and phone numbers the way Mexicans say them.</td></tr>
+          <tr class="g"><th colspan="2" scope="colgroup">Your privacy</th></tr>
+          <tr><th scope="row">No account</th><td>Nothing to sign up for. Your progress stays on your phone.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="pp-how" id="how" aria-labelledby="h-how">
+  <div class="wrap">
+    <h2 class="pp-h" id="h-how">How the conversations work</h2>
+    <ol class="pp-flow n3">
+      <li><b>Choose where you are</b><span>242 lessons in 24 everyday scenes: the airport, the market, the pharmacy, renting an apartment, telling your own stories.</span></li>
+      <li><b>Say your part</b><span>Speak or type. Your partner stays in role, in casual t&uacute; or polite usted, at the level you pick.</span></li>
+      <li><b>Get it right the Mexican way</b><span>When you slip, you see what a Mexican would say and why, and your own mistakes come back as quick speaking drills.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="mx-pass" id="travel" aria-labelledby="h-pass">
+  <div class="wrap">
+    <div class="card">
+      <div>
+        <h2 id="h-pass">Traveling to Mexico soon? <em>Get the 30-Day Travel Pass!</em></h2>
+        <p>One payment opens everything in MXNOW for 30 days. It doesn&rsquo;t renew, so there is nothing to cancel.</p>
+        <p>It comes with <b>Plan de viaje</b>: thirty days of short steps that follow your trip, from landing to flying home. Each day is built around 15 minutes, and you&rsquo;ll get the most out of it if you can spend closer to 30.</p>
+      </div>
+      <img src="/assets/apps/mxnow/plan.jpg" width="540" height="1174" alt="Plan de viaje: the thirty days of the plan, week by week." loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="pp-price" id="price" aria-labelledby="h-price">
+  <div class="wrap">
+    <div class="pp-price-h">
+      <h2 class="pp-h" id="h-price">Choose how you learn</h2>
+      <p class="mx-os mx-os-c">For iPhone and Android</p>
+    </div>
+    <div class="pp-cards">
+      <article class="pp-card s2">
+        <div class="pp-card-h"><p class="pp-card-n">Subscription</p><p class="pp-tag">7-day free trial on the yearly plan</p></div>
+        <p class="pp-amt"><b>$24.99 <span>a month</span></b> or $149.99 a year. Every scene and lesson, and Pl&aacute;tica libre, with your partner&rsquo;s coaching in each one.</p>
+        <p class="pp-inc">Renews until you cancel it in your Apple or Google account.</p>
+      </article>
+      <article class="pp-card s2">
+        <div class="pp-card-h"><p class="pp-card-n">30-Day Travel Pass</p><p class="pp-tag">Includes Plan de viaje</p></div>
+        <p class="pp-amt"><b>$29.99 <span>one payment</span></b> Everything a subscription opens, for 30 days. No renewal, nothing to cancel.</p>
+        <p class="pp-inc">A second pass bought before the first ends adds 30 more days.</p>
+      </article>
+    </div>
+    <p class="mx-free">En el caf&eacute; and En el restaurante are free, and so are O&iacute;do mexicano, the word lists and the drills.</p>
+    <p class="pp-edfine">Prices in U.S. dollars. You buy through the App Store or Google Play, and the store charges you. On Android, Google Play sells the Travel Pass as one calendar month.</p>
+    <p class="mx-links"><a href="/mxnow/">Support</a><a href="/mxnow/privacy/">Privacy Policy</a><a href="/mxnow/terms/">Terms of Use</a></p>
+  </div>
+</section>
+
+<section class="pp-closer" aria-labelledby="h-closer">
+  <div class="wrap">
+    <h2 id="h-closer">Say it out loud before you need it.</h2>
+    <p class="mx-os mx-os-c">For iPhone and Android</p>
+  </div>
+</section>
+
+</main>
+
+<div class="ribbon" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><p class="fname">OnSide Software</p><p style="margin:0">Phoenix, Arizona.</p></div>
+      <div><h4>Phone apps</h4><ul><li><a href="/apps/">All phone apps</a></li><li><a href="/apps/mxnow/">MXNOW</a></li></ul></div>
+      <div><h4>MXNOW</h4><ul><li><a href="/mxnow/">Support</a></li><li><a href="/mxnow/privacy/">Privacy</a></li><li><a href="/mxnow/terms/">Terms</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/">Home</a></li><li><a href="/#contact">Contact</a></li><li><a href="mailto:support@onsidesoftware.com">Support</a></li></ul></div>
+    </div>
+    <p class="fine">&copy; 2026 OnSide Software, Inc. All rights reserved. MXNOW is made by OnSide Software, Inc. Apple, iPhone and App Store are trademarks of Apple Inc.; Android and Google Play are trademarks of Google LLC. Screens shown are from the app.</p>
+  </div>
+</footer>
+</body>
+</html>
